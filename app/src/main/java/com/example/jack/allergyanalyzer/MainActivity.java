@@ -2,7 +2,7 @@ package com.example.jack.allergyanalyzer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+//This is the search page
 public class MainActivity extends AppCompatActivity {
 
     @Override
