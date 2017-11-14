@@ -7,47 +7,83 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.CheckedTextView;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
 
 public class Profile extends AppCompatActivity {
 
-    public static final String SAVED_NAME = "com.allergyanalyzer.allergyanalyzer.nameMessage";
-    public static final String SAVED_PHONE = "com.allergyanalyzer.allergyanalyzer.phoneMessage";
-    public static final String SAVED_EMAIL = "com.allergyanalyzer.allergyanalyzer.emailMessage";
-    public static final String SAVED_ALLERGY = "com.allergyanalyzer.allergyanalyzer.allergyMessage";
-    
+    public static final String SAVED_PROFILE = "com.allergyanalyzer.allergyanalyzer";
+    public static final String SAVED_PROFILE2 = "com.allergyanalyzer.allergyanalyzer";
+    public static final String SAVED_PROFILE3 = "com.allergyanalyzer.allergyanalyzer";
+    public static final String SAVED_PROFILE4 = "com.allergyanalyzer.allergyanalyzer";
+    //String array holding the list of allergies
+    String[] Allergy= {
+            "Corn Allergy",
+            "Egg Allergy",
+            "Fish Allergy",
+            "Meat Allergy",
+            "Milk Allergy",
+            "Peanut Allergy",
+            "Shellfish Allergy",
+            "Soy Allergy",
+            "Tree Nut Allergy",
+            "Wheat Allergy",
+            "FPIES Allergy",};
+
+    //JUSTINS CODE STARTS HERE
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_page);
+        setContentView(R.layout.activity_profile);
+
+        ListView listview= getListView();
+        listview.setChoiceMode(listview.CHOICE_MODE_MULTIPLE);
+        //text filtering
+        listview.setTextFilterEnabled(true);
+
+        setListAdapter(new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_checked,Allergy));
+
     }
-    
+
     /** Called when the user taps the Save button */
-    public void saveMessage(View view) {
+    public void saveMessage(View view)
+    {
         // Do something in response to button
-        Intent intent = new Intent(ProfilePage.this, SavedProfilePage.class);
-        Bundle extras = new Bundle();
+        Intent intent = new Intent(Profile.this, SavedProfilePage.class);
         //Takes in person's name
         EditText editText = findViewById(R.id.editText5);
         String nameMessage = editText.getText().toString();
-        extras.putString(SAVED_NAME, nameMessage);
-        
+        intent.putExtra(SAVED_PROFILE, nameMessage);
+        startActivity(intent);
+
+        Intent intent2 = new Intent(Profile.this, SavedProfilePage.class);
         //Takes in person's phone number
-        editText = findViewById(R.id.editText6);
-        String phoneMessage = editText.getText().toString();
-        extras.putString(SAVED_PHONE, phoneMessage);
-        
+        EditText editText2 = findViewById(R.id.editText6);
+        String phoneMessage = editText2.getText().toString();
+        intent2.putExtra(SAVED_PROFILE2, phoneMessage);
+        startActivity(intent2);
+
+        Intent intent3 = new Intent(Profile.this, SavedProfilePage.class);
         //Takes in person's email
-        editText = findViewById(R.id.editText7);
-        String emailMessage = editText.getText().toString();
-        extras.putString(SAVED_EMAIL, emailMessage);
-        
+        EditText editText3 = findViewById(R.id.editText7);
+        String emailMessage = editText3.getText().toString();
+        intent3.putExtra(SAVED_PROFILE3, emailMessage);
+        startActivity(intent3);
+
+        Intent intent4 = new Intent(Profile.this, SavedProfilePage.class);
         //Take's in person's allergies
         //Batool will change this
-        editText = findViewById(R.id.editText9);
-        String allergyMessage = editText.getText().toString();
-        extras.putString(SAVED_ALLERGY, allergyMessage);
-        intent.putExtras(extras);
-        startActivity(intent);
+
     }
+    public void onListItemClick(ListView parent, View v,int position,long id){
+        CheckedTextView item = (CheckedTextView) v;
+        Toast.makeText(this, Allergy[position] + " checked : " +
+                item.isChecked(), Toast.LENGTH_SHORT).show();
+    }
+}
+
 }
