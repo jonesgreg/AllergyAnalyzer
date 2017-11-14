@@ -3,17 +3,19 @@ import java.util.ArrayList;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-
+// Profile object to be stored in an arraylist
 public class Profile implements Parcelable
 {
     private String name;
     private String email;
     private ArrayList<String> allergies = new ArrayList<String>();
 
+    //Constructors
     public Profile()
     {
 
     }
+
     public Profile(String n, String e, ArrayList<String> a)
     {
         name = n;
@@ -22,7 +24,7 @@ public class Profile implements Parcelable
             allergies.add(a.get(i));
 
     }
-
+    //Parcel methods
     protected Profile(Parcel in)
     {
         name = in.readString();

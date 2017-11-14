@@ -9,12 +9,11 @@ import android.widget.CheckedTextView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 
 public class ProfileActivity extends ListActivity {
-
+    //Storage variables
     String nameMessage;
     String emailMessage;
     ArrayList<String> Allergies = new ArrayList<String>();
@@ -38,14 +37,22 @@ public class ProfileActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
+        //Submit button
         Button btn = (Button) findViewById(R.id.button);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Profile user = new Profile(nameMessage,emailMessage,Allergies);
-                
+                //If inputs are invalid tell the user else create profile
+                if(nameMessage == null || emailMessage == null || Allergies.size() == 0)
+                    Toast.makeText(ProfileActivity.this, "Please fill in all fields",
+                            Toast.LENGTH_LONG).show();
+                else
+                {
+                    Profile user = new Profile(nameMessage,emailMessage,Allergies);
+                    Toast.makeText(ProfileActivity.this, "User profile created",
+                            Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -55,7 +62,7 @@ public class ProfileActivity extends ListActivity {
 
     }
 
-    /** Called when the user taps the Save button */
+    /** Called when the user taps the Save button deals with fields and drop down list*/
     public void setProfile()
     {
 
@@ -84,6 +91,7 @@ public class ProfileActivity extends ListActivity {
     }
     public void onListItemClick(ListView parent, View v,int position,long id){
         CheckedTextView item = (CheckedTextView) v;
+        //if item is unchecked and add to Allergies, else uncheck and take it out of Allergies
         if(item.isChecked())
         {
             Toast.makeText(this, Allergy[position] + " checked : " +
