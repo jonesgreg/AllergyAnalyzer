@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Allergy Analyzer</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="select_your_food_allergy_from_the_down_list">allergyDropDown</string>
+</resources>
