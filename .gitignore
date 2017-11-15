@@ -4,3 +4,7 @@ html/
 doc/
 latex/
 CVS/
+*.DS_Store
+.idea
+.gradle
+*.properties
