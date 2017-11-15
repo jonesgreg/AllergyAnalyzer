@@ -1,5 +1,4 @@
-package com.example.gregoryjones.ingredientsandrecipes;
-
+package com.example.jack.allergyanalyzer;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v4.app.FragmentManager;

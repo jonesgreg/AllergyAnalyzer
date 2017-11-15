@@ -1,5 +1,4 @@
-package com.example.gregoryjones.ingredientsandrecipes;
-
+package com.example.jack.allergyanalyzer;
 import android.util.Log;
 
 import org.json.JSONArray;

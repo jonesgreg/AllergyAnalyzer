@@ -1,5 +1,4 @@
-package com.example.gregoryjones.ingredientsandrecipes;
-
+package com.example.jack.allergyanalyzer;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
