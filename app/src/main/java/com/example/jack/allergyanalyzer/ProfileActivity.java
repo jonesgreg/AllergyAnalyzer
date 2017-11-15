@@ -44,8 +44,8 @@ public class ProfileActivity extends ListActivity {
             @Override
             public void onClick(View v) {
                 //If inputs are invalid tell the user else create profile
-                if(nameMessage == null || emailMessage == null || Allergies.size() == 0)
-                    Toast.makeText(ProfileActivity.this, "Please fill in all fields",
+                if(Allergies.size() == 0)
+                    Toast.makeText(ProfileActivity.this, "Choose at least one Allergy",
                             Toast.LENGTH_LONG).show();
                 else
                 {
