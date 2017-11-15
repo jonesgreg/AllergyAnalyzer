@@ -50,6 +50,7 @@ public class Profile implements Parcelable
         return 0;
     }
 
+    //Writing to parcel
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
