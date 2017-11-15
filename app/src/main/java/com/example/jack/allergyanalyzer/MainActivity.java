@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run(){
                 //the intent connected to this activity is the HomeActivity
-                Intent homeIntent = new Intent(MainActivity.this,ProfileActivity.class);
+                Intent homeIntent = new Intent(MainActivity.this,HomeActivity.class);
                 startActivity(homeIntent);
                 finish();
 
