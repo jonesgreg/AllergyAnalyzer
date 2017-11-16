@@ -49,6 +49,7 @@ public class ProfileActivity extends ListActivity {
                             Toast.LENGTH_LONG).show();
                 else
                 {
+
                     Profile user = new Profile(nameMessage,emailMessage,Allergies);
                     Toast.makeText(ProfileActivity.this, "User profile created",
                             Toast.LENGTH_LONG).show();

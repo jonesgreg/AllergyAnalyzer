@@ -1,5 +1,4 @@
-package com.example.gregoryjones.ingredientsandrecipes;
-
+package com.example.jack.allergyanalyzer;
 /**
  * Created by gregoryjones on 11/13/17.
  */
