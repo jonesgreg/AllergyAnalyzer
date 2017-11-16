@@ -1,11 +1,16 @@
 package com.example.jack.allergyanalyzer;
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 import java.util.ArrayList;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 // Profile object to be stored in an arraylist
-public class Profile implements Parcelable
+public class Profile implements Externalizable,Parcelable
 {
+    //Instance variables
     private String name;
     private String email;
     private ArrayList<String> allergies = new ArrayList<String>();
@@ -18,21 +23,16 @@ public class Profile implements Parcelable
 
     public Profile(String n, String e, ArrayList<String> a)
     {
-        name = n;
-        email = e;
+        this.name = n;
+        this.email = e;
         for(int i = 0; i < a.size(); i++)
             allergies.add(a.get(i));
 
     }
     //Parcel methods
-    protected Profile(Parcel in)
-    {
-        name = in.readString();
-        email = in.readString();
-        allergies = in.createStringArrayList();
-    }
 
-    public static final Creator<Profile> CREATOR = new Creator<Profile>() {
+    public static final Creator<Profile> CREATOR = new Creator<Profile>()
+    {
         @Override
         public Profile createFromParcel(Parcel in) {
             return new Profile(in);
@@ -44,6 +44,13 @@ public class Profile implements Parcelable
         }
     };
 
+    protected Profile(Parcel in)
+    {
+        this.name = in.readString();
+        this.email = in.readString();
+        this.allergies = in.createStringArrayList();
+    }
+
     @Override
     public int describeContents()
     {
@@ -52,10 +59,27 @@ public class Profile implements Parcelable
 
     //Writing to parcel
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(name);
-        dest.writeString(email);
-        dest.writeStringList(allergies);
+    public void writeToParcel(Parcel dest, int flags)
+    {
+        dest.writeString(this.name);
+        dest.writeString(this.email);
+        dest.writeStringList(this.allergies);
+    }
+    //Externalizible
+    @Override
+    public void writeExternal(ObjectOutput out) throws IOException
+    {
+        out.writeObject(name);
+        out.writeObject(email);
+        out.writeObject(allergies);
+    }
+
+    @Override
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException
+    {
+        this.name = (String) in.readObject();
+        this.email = (String) in.readObject();
+        this.allergies = (ArrayList<String>) in.readObject();
     }
 }
 
