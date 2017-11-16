@@ -20,10 +20,13 @@
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ProfilePage" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".searchActivity" />
         <activity android:name=".IngSearchActivity" />
+        <activity android:name=".searchActivity" />
+        <activity android:name=".SearchingActivity"/>
+        <activity android:name=".RecipeListActivity"/>
+        <activity android:name=".SavedProfilePage" />
         <activity android:name=".RecSearchActivity"></activity>
     </application>
 
