@@ -1,10 +1,12 @@
-package com.allergyanalyzer.allergyanalyzer;
+package com.example.jack.allergyanalyzer;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import com.example.jack.allergyanalyzer.R;
+import com.example.jack.allergyanalyzer.SavedProfilePage;
 
 public class ProfilePage extends AppCompatActivity {
     public static final String SAVED_NAME = "com.allergyanalyzer.allergyanalyzer.nameMessage";
