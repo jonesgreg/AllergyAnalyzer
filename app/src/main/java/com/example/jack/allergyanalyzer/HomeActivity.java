@@ -16,7 +16,7 @@ import android.widget.ImageButton;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private ImageButton b; //search button
+    private ImageButton b1; //search button
     private ImageButton b2; //profile button
 
     @Override
@@ -24,13 +24,13 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        b=(ImageButton)findViewById(R.id.imageButton5);
+        b1=(ImageButton)findViewById(R.id.imageButton5);
         b2=(ImageButton)findViewById(R.id.imageButton9);
 
 
 
         //-------------------------------------------------
-        b.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             /**
              * This method enable us to click on search button and move to searchActivity
              */

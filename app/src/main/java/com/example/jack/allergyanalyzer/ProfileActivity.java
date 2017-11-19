@@ -1,6 +1,7 @@
 package com.example.jack.allergyanalyzer;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.view.View;
@@ -32,60 +33,54 @@ public class ProfileActivity extends ListActivity {
             "Wheat Allergy",
             "FPIES Allergy",};
 
-    //JUSTINS CODE STARTS HERE
+    Intent intent;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
         //Submit button
         Button btn = (Button) findViewById(R.id.button);
+
+        final EditText editText = (EditText) findViewById(R.id.editText5);
+        final EditText editText3 = (EditText) findViewById(R.id.editText7);
+
+        ListView listview= getListView();
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //If inputs are invalid tell the user else create profile
+
+                intent = new Intent(getApplicationContext(),SavedProfileActivity.class);
+
                 if(Allergies.size() == 0)
                     Toast.makeText(ProfileActivity.this, "Choose at least one Allergy",
                             Toast.LENGTH_LONG).show();
                 else
                 {
 
-                    Profile user = new Profile(nameMessage,emailMessage,Allergies);
-                    Toast.makeText(ProfileActivity.this, "User profile created",
-                            Toast.LENGTH_LONG).show();
+                    nameMessage = editText.getText().toString();
+                    emailMessage = editText3.getText().toString();
+
+                    intent.putExtra("name",nameMessage);
+                    intent.putExtra("email",emailMessage);
+                    intent.putExtra("allergies",Allergies);
+                    startActivity(intent);
                 }
             }
         });
 
 
-        setProfile();
-
-
-    }
-
-    /** Called when the user taps the Save button deals with fields and drop down list*/
-    public void setProfile()
-    {
-
-        // Do something in response to button
-
-        //Takes in person's name
-        EditText editText = (EditText) findViewById(R.id.editText5);
-        nameMessage = editText.getText().toString();
-
-        //Takes in person's email
-        EditText editText3 = (EditText) findViewById(R.id.editText7);
-        emailMessage = editText3.getText().toString();
-
-        //Take's in person's allergies
-
-        ListView listview= getListView();
         listview.setChoiceMode(listview.CHOICE_MODE_MULTIPLE);
         //text filtering
         listview.setTextFilterEnabled(true);
 
         setListAdapter(new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_checked,Allergy));
+
 
 
 
