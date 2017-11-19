@@ -23,6 +23,15 @@ public class SavedProfileActivity extends AppCompatActivity {
         ArrayList<String> allergies = extras.getStringArrayList("allergies");
         Profile user = new Profile(name,email,allergies);
 
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+
+        }
+
     }
 
 }
