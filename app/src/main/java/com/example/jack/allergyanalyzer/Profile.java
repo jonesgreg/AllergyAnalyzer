@@ -12,7 +12,7 @@ public class Profile implements Externalizable,Parcelable
 {
     //Instance variables
     private String name;
-    private String email;
+    private String password;
     private ArrayList<String> allergies = new ArrayList<String>();
 
     //Constructors
@@ -24,7 +24,7 @@ public class Profile implements Externalizable,Parcelable
     public Profile(String n, String e, ArrayList<String> a)
     {
         this.name = n;
-        this.email = e;
+        this.password = e;
         for(int i = 0; i < a.size(); i++)
             allergies.add(a.get(i));
 
@@ -47,7 +47,7 @@ public class Profile implements Externalizable,Parcelable
     protected Profile(Parcel in)
     {
         this.name = in.readString();
-        this.email = in.readString();
+        this.password = in.readString();
         this.allergies = in.createStringArrayList();
     }
 
@@ -62,7 +62,7 @@ public class Profile implements Externalizable,Parcelable
     public void writeToParcel(Parcel dest, int flags)
     {
         dest.writeString(this.name);
-        dest.writeString(this.email);
+        dest.writeString(this.password);
         dest.writeStringList(this.allergies);
     }
     //Externalizible
@@ -70,7 +70,7 @@ public class Profile implements Externalizable,Parcelable
     public void writeExternal(ObjectOutput out) throws IOException
     {
         out.writeObject(name);
-        out.writeObject(email);
+        out.writeObject(password);
         out.writeObject(allergies);
     }
 
@@ -78,7 +78,7 @@ public class Profile implements Externalizable,Parcelable
     public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException
     {
         this.name = (String) in.readObject();
-        this.email = (String) in.readObject();
+        this.password = (String) in.readObject();
         this.allergies = (ArrayList<String>) in.readObject();
     }
 }

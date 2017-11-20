@@ -24,10 +24,11 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".IngSearchActivity" />
         <activity android:name=".searchActivity" />
-        <activity android:name=".SearchingActivity"/>
-        <activity android:name=".RecipeListActivity"/>
+        <activity android:name=".SearchingActivity" />
+        <activity android:name=".RecipeListActivity" />
         <activity android:name=".SavedProfilePage" />
-        <activity android:name=".RecSearchActivity"></activity>
+        <activity android:name=".RecSearchActivity" />
+        <activity android:name=".SignUpActivity"></activity>
     </application>
 
 </manifest>

@@ -17,7 +17,8 @@ import java.util.ArrayList;
 public class ProfileActivity extends AppCompatActivity {
     //Storage variables
     String nameMessage;
-    String emailMessage;
+    String passwordMessage;
+    private Button signUpButton;
 
 
     Intent intent;
@@ -28,35 +29,42 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        //final EditText editText2 = (EditText) findViewById(R.id.editText_userName);
+        //final EditText editText3 = (EditText) findViewById(R.id.editText_password);
+
+        //Button btn = (Button) findViewById(R.id.button_signUp);
+        //Button btn2 = (Button) findViewById(R.id.button_login);
+        signUpButton = (Button) findViewById(R.id.button_signUp);
 
 
-        final EditText editText = (EditText) findViewById(R.id.editText5);
-        final EditText editText3 = (EditText) findViewById(R.id.editText7);
-
-        Button btn = (Button) findViewById(R.id.button2);
-
-
-        btn.setOnClickListener(new View.OnClickListener() {
+        /*btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 intent = new Intent(getApplicationContext(),SavedProfileActivity.class);
-                nameMessage = editText.getText().toString();
-                emailMessage = editText3.getText().toString();
+                nameMessage = editText2.getText().toString();
+                passwordMessage = editText3.getText().toString();
 
-                if(nameMessage == null || emailMessage == null)
-                    Toast.makeText(ProfileActivity.this, "Please fill all feilds",
+                if(nameMessage == null || passwordMessage == null)
+                    Toast.makeText(ProfileActivity.this, "Please fill all fields",
                             Toast.LENGTH_LONG).show();
                 else
                 {
                     intent.putExtra("name",nameMessage);
-                    intent.putExtra("email",emailMessage);
+                    intent.putExtra("password",passwordMessage);
                     startActivity(intent);
                 }
             }
         });
+        */
 
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(getApplicationContext(),SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
     }
-
 }
 

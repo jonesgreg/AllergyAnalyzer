@@ -38,9 +38,10 @@ public class Profile2Activity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
 
-        Button btn = (Button) findViewById(R.id.button);
+        Button btn = (Button) findViewById(R.id.button_signUp);
+        Button btn2 = (Button) findViewById(R.id.button_login);
         ListView listview= getListView();
-        //Submit button
+        //Sign up button
 
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -57,13 +58,20 @@ public class Profile2Activity extends ListActivity {
                 {
                     Bundle extras = getIntent().getExtras();
                     String name = extras.getString("name");
-                    String email = extras.getString("email");
+                    String password = extras.getString("password");
 
                     intent.putExtra("name",name);
-                    intent.putExtra("email",email);
+                    intent.putExtra("password",password);
                     intent.putExtra("allergies",Allergies);
                     startActivity(intent);
                 }
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 
