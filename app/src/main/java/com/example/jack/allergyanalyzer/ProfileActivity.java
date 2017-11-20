@@ -19,9 +19,11 @@ public class ProfileActivity extends AppCompatActivity {
     String nameMessage;
     String passwordMessage;
     private Button signUpButton;
+    private Button loginButton;
 
 
-    Intent intent;
+    Intent signUpIntent;
+    Intent loginIntent;
 
 
     @Override
@@ -29,12 +31,11 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        //final EditText editText2 = (EditText) findViewById(R.id.editText_userName);
-        //final EditText editText3 = (EditText) findViewById(R.id.editText_password);
+        final EditText editText2 = (EditText) findViewById(R.id.editText_userName);
+        final EditText editText3 = (EditText) findViewById(R.id.editText_password);
 
-        //Button btn = (Button) findViewById(R.id.button_signUp);
-        //Button btn2 = (Button) findViewById(R.id.button_login);
         signUpButton = (Button) findViewById(R.id.button_signUp);
+        loginButton  = (Button) findViewById(R.id.button_login);
 
 
         /*btn.setOnClickListener(new View.OnClickListener() {
@@ -61,8 +62,29 @@ public class ProfileActivity extends AppCompatActivity {
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(getApplicationContext(),SignUpActivity.class);
-                startActivity(intent);
+                signUpIntent = new Intent(getApplicationContext(),SignUpActivity.class);
+                startActivity(signUpIntent);
+            }
+        });
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loginIntent = new Intent(getApplicationContext(), LoginActivity.class);
+                nameMessage = editText2.getText().toString();
+                passwordMessage = editText3.getText().toString();
+
+                if(nameMessage == null || passwordMessage == null)
+                {
+                    Toast.makeText(ProfileActivity.this, "Please fill all fields",
+                            Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    loginIntent.putExtra("name",nameMessage);
+                    loginIntent.putExtra("password",passwordMessage);
+                    startActivity(loginIntent);
+                }
             }
         });
     }

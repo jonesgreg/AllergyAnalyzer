@@ -16,20 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HomeActivity" />
         <activity
             android:name=".ProfileActivity"
-            android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".HomeActivity" />
+            android:parentActivityName=".HomeActivity"
+            android:label="@string/title_activity_profile">
+        </activity>
         <activity android:name=".IngSearchActivity" />
         <activity android:name=".searchActivity" />
         <activity android:name=".RecSearchActivity" />
-        <activity android:name=".SignUpActivity"
-                  android:parentActivityName=".ProfileActivity" >
-                  <!-- The meta-data tag is required if you support API level 15 and lower -->
-                  <meta-data
-                  android:name="android.support.PARENT_ACTIVITY"
-                  android:value=".ProfileActivity" />></activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:parentActivityName=".ProfileActivity">
+        </activity>
+        <activity android:name=".LoginActivity"
+                  android:parentActivityName=".ProfileActivity">
+        </activity>
     </application>
 
 </manifest>
