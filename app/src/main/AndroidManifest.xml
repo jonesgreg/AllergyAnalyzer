@@ -20,15 +20,16 @@
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ProfilePage" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".IngSearchActivity" />
         <activity android:name=".searchActivity" />
-        <activity android:name=".SearchingActivity" />
-        <activity android:name=".RecipeListActivity" />
-        <activity android:name=".SavedProfilePage" />
         <activity android:name=".RecSearchActivity" />
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".SignUpActivity"
+                  android:parentActivityName=".ProfileActivity" >
+                  <!-- The meta-data tag is required if you support API level 15 and lower -->
+                  <meta-data
+                  android:name="android.support.PARENT_ACTIVITY"
+                  android:value=".ProfileActivity" />></activity>
     </application>
 
 </manifest>
