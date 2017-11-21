@@ -13,6 +13,8 @@ public class Profile implements Externalizable,Parcelable
     //Instance variables
     private String name;
     private String password;
+    private String email;
+    private boolean gender;
     private ArrayList<String> allergies = new ArrayList<String>();
 
     //Constructors
@@ -21,10 +23,12 @@ public class Profile implements Externalizable,Parcelable
 
     }
 
-    public Profile(String n, String e, ArrayList<String> a)
+    public Profile(String n, String p, String e, boolean g, ArrayList<String> a)
     {
         this.name = n;
-        this.password = e;
+        this.password = p;
+        this.email = e;
+        this.gender = g;
         for(int i = 0; i < a.size(); i++)
             allergies.add(a.get(i));
 
@@ -48,6 +52,8 @@ public class Profile implements Externalizable,Parcelable
     {
         this.name = in.readString();
         this.password = in.readString();
+        this.email = in.readString();
+        this.gender = (in.readInt() == 0) ? false : true;
         this.allergies = in.createStringArrayList();
     }
 
@@ -63,15 +69,19 @@ public class Profile implements Externalizable,Parcelable
     {
         dest.writeString(this.name);
         dest.writeString(this.password);
+        dest.writeString(this.email);
+        dest.writeInt(this.gender ? 1 : 0);
         dest.writeStringList(this.allergies);
     }
     //Externalizible
     @Override
     public void writeExternal(ObjectOutput out) throws IOException
     {
-        out.writeObject(name);
-        out.writeObject(password);
-        out.writeObject(allergies);
+        out.writeObject(this.name);
+        out.writeObject(this.password);
+        out.writeObject(this.email);
+        out.write(this.gender ? 1 : 0);
+        out.writeObject(this.allergies);
     }
 
     @Override
@@ -79,6 +89,8 @@ public class Profile implements Externalizable,Parcelable
     {
         this.name = (String) in.readObject();
         this.password = (String) in.readObject();
+        this.email = (String) in.readObject();
+        this.gender = (boolean) in.readObject();
         this.allergies = (ArrayList<String>) in.readObject();
     }
 }

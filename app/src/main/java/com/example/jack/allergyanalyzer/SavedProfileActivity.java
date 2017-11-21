@@ -21,7 +21,7 @@ public class SavedProfileActivity extends AppCompatActivity {
         String name = extras.getString("name");
         String email = extras.getString("email");
         ArrayList<String> allergies = extras.getStringArrayList("allergies");
-        Profile user = new Profile(name,email,allergies);
+
 
         try
         {

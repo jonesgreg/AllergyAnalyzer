@@ -38,42 +38,34 @@ public class Profile2Activity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
 
-        Button btn = (Button) findViewById(R.id.button_signUp);
-        Button btn2 = (Button) findViewById(R.id.button_login);
+        Button btn = (Button) findViewById(R.id.button);
         ListView listview= getListView();
-        //Sign up button
+        //Submit button
+    /** To-Do make add the proper inputs for saving and link to proper Activity */
 
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //If inputs are invalid tell the user else create profile
-
-                intent = new Intent(getApplicationContext(),SavedProfileActivity.class);
-
-                if(Allergies.size() == 0)
-                    Toast.makeText(Profile2Activity.this, "Choose at least one Allergy",
-                            Toast.LENGTH_LONG).show();
-                else
-                {
-                    Bundle extras = getIntent().getExtras();
-                    String name = extras.getString("name");
-                    String password = extras.getString("password");
-
-                    intent.putExtra("name",name);
-                    intent.putExtra("password",password);
-                    intent.putExtra("allergies",Allergies);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //If inputs are invalid tell the user else create profile
+//
+//                intent = new Intent(getApplicationContext(),SavedProfileActivity.class);
+//
+//                if(Allergies.size() == 0)
+//                    Toast.makeText(Profile2Activity.this, "Choose at least one Allergy",
+//                            Toast.LENGTH_LONG).show();
+//                else
+//                {
+//                    Bundle extras = getIntent().getExtras();
+//                    String name = extras.getString("name");
+//                    String email = extras.getString("email");
+//
+//                    intent.putExtra("name",name);
+//                    intent.putExtra("email",email);
+//                    intent.putExtra("allergies",Allergies);
+//                    startActivity(intent);
+//                }
+//            }
+//        });
 
 
         listview.setChoiceMode(listview.CHOICE_MODE_MULTIPLE);
