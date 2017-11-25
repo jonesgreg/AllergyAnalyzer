@@ -8,4 +8,5 @@
     <string name="password_message">Password</string>
     <string name="email_message">Email</string>
     <string name="button_submit">Submit</string>
+    <string name="select_a_ingredient">Select a ingredient</string>
 </resources>
