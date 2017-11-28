@@ -73,6 +73,7 @@ public class Profile2Activity extends ListActivity {
                         fileOut.close();
 
                         intent.putExtra("name",name);
+                        intent.putExtra("pass", pass);
                         startActivity(intent);
                     }
                     catch(Exception e)
