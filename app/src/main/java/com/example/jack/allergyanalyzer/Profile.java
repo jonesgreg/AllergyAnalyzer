@@ -31,8 +31,16 @@ public class Profile implements Externalizable,Parcelable
         this.gender = g;
         for(int i = 0; i < a.size(); i++)
             allergies.add(a.get(i));
-
     }
+    public String getName()
+    {
+        return this.name;
+    }
+    public String getPass()
+    {
+        return this.password;
+    }
+
     //Parcel methods
 
     public static final Creator<Profile> CREATOR = new Creator<Profile>()
@@ -80,7 +88,7 @@ public class Profile implements Externalizable,Parcelable
         out.writeObject(this.name);
         out.writeObject(this.password);
         out.writeObject(this.email);
-        out.write(this.gender ? 1 : 0);
+       // out.write(this.gender ? 1 : 0);
         out.writeObject(this.allergies);
     }
 
