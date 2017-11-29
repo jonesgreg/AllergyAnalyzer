@@ -40,6 +40,15 @@ public class Profile implements Externalizable,Parcelable
     {
         return this.password;
     }
+    public String getEmail() {return this.email;}
+    public boolean getGender(){return this.gender;}
+    public String getAllergies()
+    {
+        String str = "";
+        for(int i = 0; i < this.allergies.size();i++)
+            str += this.allergies.get(i) + ", ";
+        return str;
+    }
 
     //Parcel methods
 
@@ -88,7 +97,7 @@ public class Profile implements Externalizable,Parcelable
         out.writeObject(this.name);
         out.writeObject(this.password);
         out.writeObject(this.email);
-       // out.write(this.gender ? 1 : 0);
+        out.writeBoolean(this.gender);
         out.writeObject(this.allergies);
     }
 
@@ -98,7 +107,7 @@ public class Profile implements Externalizable,Parcelable
         this.name = (String) in.readObject();
         this.password = (String) in.readObject();
         this.email = (String) in.readObject();
-        this.gender = (boolean) in.readObject();
+        this.gender = in.readBoolean();
         this.allergies = (ArrayList<String>) in.readObject();
     }
 }

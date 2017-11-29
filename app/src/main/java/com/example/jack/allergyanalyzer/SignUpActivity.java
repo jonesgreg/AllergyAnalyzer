@@ -48,7 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
                 else
                 {
                     intent.putExtra("name",name);
-                    intent.putExtra("password",pass);
+                    intent.putExtra("pass",pass);
                     intent.putExtra("email",email);
                     intent.putExtra("gender",gender);
                     startActivity(intent);

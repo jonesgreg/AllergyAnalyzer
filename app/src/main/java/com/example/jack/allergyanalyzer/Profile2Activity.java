@@ -49,8 +49,6 @@ public class Profile2Activity extends ListActivity {
         final boolean gender = extra.getBoolean("gender");
         intent = new Intent(getApplicationContext(),SavedProfileActivity.class);
 
-        final String filePath = getFilesDir() + "/" + name + ".ser";
-
         Button btn = (Button) findViewById(R.id.button);
         ListView listview= getListView();
         //Submit button
@@ -62,18 +60,18 @@ public class Profile2Activity extends ListActivity {
 
                     try
                     {
-                        File file = new File(getFilesDir(), name + ".ser");
+                        File file = new File(getFilesDir(), name + ".ser"); // name of file
 
-                        Profile user = new Profile(name,pass,email,gender,allergies);
+                        Profile user = new Profile(name,pass,email,gender,allergies); // creation of user Profile object
 
+                        //Opens file stream and writes the object
                         FileOutputStream fileOut = new FileOutputStream(file);
                         ObjectOutputStream outStream = new ObjectOutputStream(fileOut);
-                        outStream.writeObject(user);
-                        outStream.close();
+                        user.writeExternal(outStream);
+                        outStream.flush();
                         fileOut.close();
-
+                        //Starts new activity that May not be used in final project but it will check to see if this worked.
                         intent.putExtra("name",name);
-                        intent.putExtra("pass", pass);
                         startActivity(intent);
                     }
                     catch(Exception e)

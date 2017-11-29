@@ -25,25 +25,37 @@ public class SavedProfileActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         String name = extras.getString("name");
         String pass = extras.getString("pass");
-        Profile user;
+
+        Profile user = new Profile();
+
         try
         {
             FileInputStream fileIn = new FileInputStream(getFilesDir().getAbsolutePath() + "/"+name+".ser");
-            Log.e("after fileIn","it reached");
             ObjectInputStream inStream = new ObjectInputStream(fileIn);
-            Log.e("after inSteam","it reached");
-            user = (Profile) inStream.readObject();
+
+            user.readExternal(inStream);
+
             inStream.close();
             fileIn.close();
 
-            if(user.getName() == name && user.getPass() == pass)
+            if(true)
             {
                 /*TODO put in code that assigns proper information to ui*/
                 Toast.makeText(SavedProfileActivity.this, "IT WORKED!",
                         Toast.LENGTH_LONG).show();
+                Log.e("Name ",user.getName());
+                Log.e("Pass ",user.getPass());
+                Log.e("Email ", user.getEmail());
+                Log.e("Boolean ", "" + user.getGender());
+                Log.e("Allergies ", user.getAllergies());
             }
         }
-        catch(Exception e){e.printStackTrace();}
+        catch(Exception e)
+        {
+            Toast.makeText(SavedProfileActivity.this, "Error File Not Found!",
+                    Toast.LENGTH_LONG).show();
+            Log.e("     1       : ", e.toString());
+        }
 
 
 

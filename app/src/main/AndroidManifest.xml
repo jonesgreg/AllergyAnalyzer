@@ -29,7 +29,7 @@
         <activity android:name=".RecSearchActivity" />
         <activity android:name=".RecipeListActivity"/>
         <activity android:name=".RecipeFragmentFrame" />
-
+        <activity android:name=".SavedProfileActivity" />
 
         <activity
             android:name=".SignUpActivity"
