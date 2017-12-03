@@ -35,7 +35,8 @@ public class Profile2Activity extends ListActivity {
             "Gluten",
             "Onions",};
 
-    Intent intent;
+    Intent activityIntent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,8 @@ public class Profile2Activity extends ListActivity {
         final String pass = extra.getString("pass");
         final String email = extra.getString("email");
         final boolean gender = extra.getBoolean("gender");
-        intent = new Intent(getApplicationContext(),SavedProfileActivity.class);
+        activityIntent = new Intent(getApplicationContext(),ProfileActivity.class);
+
 
         Button btn = (Button) findViewById(R.id.button);
         ListView listview= getListView();
@@ -56,7 +58,6 @@ public class Profile2Activity extends ListActivity {
             @Override
             public void onClick(View v)
             {
-
 
                     try
                     {
@@ -70,9 +71,9 @@ public class Profile2Activity extends ListActivity {
                         user.writeExternal(outStream);
                         outStream.flush();
                         fileOut.close();
-                        //Starts new activity that May not be used in final project but it will check to see if this worked.
-                        intent.putExtra("name",name);
-                        startActivity(intent);
+
+
+                        startActivity(activityIntent);
                     }
                     catch(Exception e)
                     {

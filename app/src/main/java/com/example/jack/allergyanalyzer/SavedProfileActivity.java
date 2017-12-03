@@ -47,7 +47,6 @@ public class SavedProfileActivity extends AppCompatActivity {
                 Log.e("Pass ",user.getPass());
                 Log.e("Email ", user.getEmail());
                 Log.e("Boolean ", "" + user.getGender());
-                Log.e("Allergies ", user.getAllergies());
             }
         }
         catch(Exception e)

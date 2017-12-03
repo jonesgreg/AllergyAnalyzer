@@ -6,6 +6,8 @@
 
 package com.example.jack.allergyanalyzer;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +16,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class searchActivity extends AppCompatActivity {
 
@@ -25,8 +30,8 @@ public class searchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        im1=(ImageView)findViewById(R.id.imageView5);
-        im2=(ImageView)findViewById(R.id.imageView6);
+        im1 = (ImageView) findViewById(R.id.imageView5);
+        im2 = (ImageView) findViewById(R.id.imageView6);
 
         //-------------------------------------------------
         im1.setOnClickListener(new View.OnClickListener() {
@@ -36,7 +41,7 @@ public class searchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(),IngSearchActivity.class);
+                Intent i = new Intent(getApplicationContext(), IngSearchActivity.class);
                 startActivity(i);
             }
         });
@@ -48,7 +53,7 @@ public class searchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(),RecSearchActivity.class);
+                Intent i = new Intent(getApplicationContext(), RecSearchActivity.class);
                 startActivity(i);
             }
         });

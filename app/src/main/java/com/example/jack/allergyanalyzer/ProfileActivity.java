@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,9 @@ import android.widget.CheckedTextView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 
@@ -24,6 +28,8 @@ public class ProfileActivity extends AppCompatActivity {
 
     Intent signUpIntent;
     Intent loginIntent;
+    Intent serviceIntent;
+    Intent activityIntent;
 
 
     @Override
@@ -37,27 +43,6 @@ public class ProfileActivity extends AppCompatActivity {
         signUpButton = (Button) findViewById(R.id.button_signUp);
         loginButton  = (Button) findViewById(R.id.button_login);
 
-
-        /*btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                intent = new Intent(getApplicationContext(),SavedProfileActivity.class);
-                nameMessage = editText2.getText().toString();
-                passwordMessage = editText3.getText().toString();
-
-                if(nameMessage == null || passwordMessage == null)
-                    Toast.makeText(ProfileActivity.this, "Please fill all fields",
-                            Toast.LENGTH_LONG).show();
-                else
-                {
-                    intent.putExtra("name",nameMessage);
-                    intent.putExtra("password",passwordMessage);
-                    startActivity(intent);
-                }
-            }
-        });
-        */
 
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,9 +66,47 @@ public class ProfileActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    loginIntent.putExtra("name",nameMessage);
-                    loginIntent.putExtra("password",passwordMessage);
-                    startActivity(loginIntent);
+                    String name = editText2.getText().toString();
+                    String pass = editText3.getText().toString();
+
+                    Profile user = new Profile();
+                    try
+                    {
+                        FileInputStream fileIn = new FileInputStream(getFilesDir().getAbsolutePath() + "/"+name+".ser");
+                        ObjectInputStream inStream = new ObjectInputStream(fileIn);
+
+                        user.readExternal(inStream);
+
+                        inStream.close();
+                        fileIn.close();
+
+                        if(true)
+                        {
+                /*TODO put in code that assigns proper information to ui*/
+                            Toast.makeText(ProfileActivity.this, "Login Successful",
+                                    Toast.LENGTH_LONG).show();
+
+                            serviceIntent = new Intent(getApplicationContext(),PersistentDataService.class);
+                            activityIntent = new Intent(getApplicationContext(),searchActivity.class);
+
+                            serviceIntent.putExtra("name",user.getName());
+                            serviceIntent.putExtra("allergies", user.getAllergies());
+
+                            startService(serviceIntent);
+                            startActivity(activityIntent);
+
+                            Log.e("Name ",user.getName());
+                            Log.e("Pass ",user.getPass());
+                            Log.e("Email ", user.getEmail());
+                            Log.e("Boolean ", "" + user.getGender());
+                        }
+                    }
+                    catch(Exception e)
+                    {
+                        Toast.makeText(ProfileActivity.this, "Error File Not Found!",
+                                Toast.LENGTH_LONG).show();
+                        Log.e("     1       : ", e.toString());
+                    }
                 }
             }
         });

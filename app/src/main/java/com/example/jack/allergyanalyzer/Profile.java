@@ -42,14 +42,14 @@ public class Profile implements Externalizable,Parcelable
     }
     public String getEmail() {return this.email;}
     public boolean getGender(){return this.gender;}
-    public String getAllergies()
+    public ArrayList<String> getAllergies()
     {
-        String str = "";
-        for(int i = 0; i < this.allergies.size();i++)
-            str += this.allergies.get(i) + ", ";
-        return str;
+        return allergies;
+//        String str = "";
+//        for(int i = 0; i < this.allergies.size();i++)
+//            str += this.allergies.get(i) + ", ";
+//        return str;
     }
-
     //Parcel methods
 
     public static final Creator<Profile> CREATOR = new Creator<Profile>()
