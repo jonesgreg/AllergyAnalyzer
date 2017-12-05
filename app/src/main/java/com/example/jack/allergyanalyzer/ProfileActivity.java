@@ -22,6 +22,7 @@ public class ProfileActivity extends AppCompatActivity {
     //Storage variables
     String nameMessage;
     String passwordMessage;
+    String defaultValue;
     private Button signUpButton;
     private Button loginButton;
 
@@ -39,6 +40,8 @@ public class ProfileActivity extends AppCompatActivity {
 
         final EditText editText2 = (EditText) findViewById(R.id.editText_userName);
         final EditText editText3 = (EditText) findViewById(R.id.editText_password);
+
+        defaultValue = editText2.getText().toString();
 
         signUpButton = (Button) findViewById(R.id.button_signUp);
         loginButton  = (Button) findViewById(R.id.button_login);
@@ -80,7 +83,7 @@ public class ProfileActivity extends AppCompatActivity {
                         inStream.close();
                         fileIn.close();
 
-                        if(true)
+                        if(pass.equals(user.getPass()))
                         {
                 /*TODO put in code that assigns proper information to ui*/
                             Toast.makeText(ProfileActivity.this, "Login Successful",
@@ -99,6 +102,11 @@ public class ProfileActivity extends AppCompatActivity {
                             Log.e("Pass ",user.getPass());
                             Log.e("Email ", user.getEmail());
                             Log.e("Boolean ", "" + user.getGender());
+                        }
+                        else
+                        {
+                            Toast.makeText(ProfileActivity.this, "Incorrect Login!",
+                                    Toast.LENGTH_LONG).show();
                         }
                     }
                     catch(Exception e)
