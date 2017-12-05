@@ -26,7 +26,7 @@
         <activity
             android:name=".ProfileActivity"
             android:parentActivityName=".HomeActivity"
-            android:label="@string/title_activity_profile">
+            android:label="Login">
         </activity>
         <activity android:name=".Profile2Activity"></activity>
         <activity android:name=".IngSearchActivity" />
@@ -38,7 +38,8 @@
 
         <activity
             android:name=".SignUpActivity"
-            android:parentActivityName=".ProfileActivity">
+            android:parentActivityName=".ProfileActivity"
+            android:label="Sign Up">
         </activity>
 
         <activity android:name=".LoginActivity"
