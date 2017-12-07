@@ -90,9 +90,11 @@ public class ProfileActivity extends AppCompatActivity {
                                     Toast.LENGTH_LONG).show();
 
                             serviceIntent = new Intent(getApplicationContext(),PersistentDataService.class);
-                            activityIntent = new Intent(getApplicationContext(),searchActivity.class);
+                            activityIntent = new Intent(getApplicationContext(),HomeActivity.class);
 
                             serviceIntent.putExtra("name",user.getName());
+                            serviceIntent.putExtra("email",user.getEmail());
+                            serviceIntent.putExtra("gend",user.getGender());
                             serviceIntent.putExtra("allergies", user.getAllergies());
 
                             startService(serviceIntent);

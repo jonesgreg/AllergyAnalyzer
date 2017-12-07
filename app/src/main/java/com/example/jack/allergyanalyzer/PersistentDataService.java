@@ -20,7 +20,10 @@ public class PersistentDataService extends Service  {
 
 
     String cName = null;
+    String cEmail = null;
+    boolean cGend;
     ArrayList<String> cAllergies = null;
+
 
     private final IBinder mBinder = new LocalBinder();
 
@@ -39,7 +42,10 @@ public class PersistentDataService extends Service  {
     public int onStartCommand(Intent intent, int flags, int startId)
     {
         cName = intent.getStringExtra("name");
+        cEmail = intent.getStringExtra("email");
+        cGend = intent.getBooleanExtra("gender",true);
         cAllergies = intent.getStringArrayListExtra("allergies");
+
 
         Log.e("     in On Start", cName);
         Log.e("     in On Start", cAllergies.get(0));

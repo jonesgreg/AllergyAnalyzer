@@ -1,6 +1,10 @@
 package com.example.jack.allergyanalyzer;
 
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -18,48 +22,61 @@ import java.util.ArrayList;
 
 public class SavedProfileActivity extends AppCompatActivity {
 
+    private PersistentDataService mService;
+    private boolean mBound = false;
+
+    String name;
+    String email;
+    boolean gender;
+    ArrayList<String> allergies;
+
+    private ServiceConnection mConnection = new ServiceConnection() {
+        public void onServiceConnected(ComponentName className, IBinder service) {
+            PersistentDataService.LocalBinder binder = (PersistentDataService.LocalBinder) service;
+            mService = binder.getService();
+            name = mService.cName;
+            email = mService.cEmail;
+            gender = mService.cGend;
+            allergies = mService.cAllergies;
+
+            mBound = true;
+
+            init();
+
+        }
+        public void onServiceDisconnected(ComponentName className) {
+            mService = null;
+            mBound = false;
+        }
+    };
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved_profile);
-        Bundle extras = getIntent().getExtras();
-        String name = extras.getString("name");
-        String pass = extras.getString("pass");
 
-        Profile user = new Profile();
 
-        try
+        Intent intent = new Intent(this, PersistentDataService.class);
+
+
+        if (!mBound && name != null)
         {
-            FileInputStream fileIn = new FileInputStream(getFilesDir().getAbsolutePath() + "/"+name+".ser");
-            ObjectInputStream inStream = new ObjectInputStream(fileIn);
-
-            user.readExternal(inStream);
-
-            inStream.close();
-            fileIn.close();
-
-            if(true)
-            {
-                /*TODO put in code that assigns proper information to ui*/
-                Toast.makeText(SavedProfileActivity.this, "IT WORKED!",
-                        Toast.LENGTH_LONG).show();
-                Log.e("Name ",user.getName());
-                Log.e("Pass ",user.getPass());
-                Log.e("Email ", user.getEmail());
-                Log.e("Boolean ", "" + user.getGender());
-            }
+            bindService(intent, mConnection, BIND_IMPORTANT);
         }
-        catch(Exception e)
+        else
         {
-            Toast.makeText(SavedProfileActivity.this, "Error File Not Found!",
-                    Toast.LENGTH_LONG).show();
-            Log.e("     1       : ", e.toString());
+            /* TODO make a text feild that informs the user they must login to view login information or something */
         }
 
+        Log.e("     In On Create", "first checkpoint reached");
 
-
-
-
+    }
+    protected void init()
+    {
+        /*
+        @TODO put all of your code to show profile information here.
+         */
     }
 
 }
