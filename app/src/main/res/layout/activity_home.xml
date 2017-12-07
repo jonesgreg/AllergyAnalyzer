@@ -7,91 +7,69 @@
   tools:context=".HomeActivity">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_marginTop="-42dp"
+        android:background="@color/AmberBackground"
         android:visibility="visible"
+
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        android:id="@+id/relativeLayout"
-        android:layout_marginTop="-42dp">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:adjustViewBounds="true"
-            android:alpha=".30"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/backg"
-            tools:ignore="ContentDescription,RtlHardcoded"
-            android:layout_marginBottom="75dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="133dp"
-            android:background="@android:color/background_light"
+            android:layout_marginTop="89dp"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
             android:text="Hello ,"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="30sp"
             android:visibility="visible"
             app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="HardcodedText,RtlHardcoded"
             tools:layout_editor_absoluteY="37dp"
-            tools:ignore="HardcodedText" />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/textView4"
             android:alpha="50"
-            android:background="@android:color/background_light"
+            android:background="@color/AmberBackground"
             android:text="Do you think that what you about to eat will cause you allergy !? Let's help you to find out !!"
-            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="30sp"
+            android:textEditNoPasteWindowLayout="@color/colorPrimaryDark"
             android:visibility="visible"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints,RtlHardcoded" />
+            tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
 
             <ImageButton
                 android:id="@+id/imageButton8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/about"
                 android:contentDescription=""
+                app:srcCompat="@drawable/about"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
@@ -99,8 +77,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/help"
                 android:contentDescription=""
+                app:srcCompat="@drawable/help"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
@@ -108,8 +86,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/groups"
                 android:contentDescription=""
+                app:srcCompat="@drawable/groups"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
@@ -117,8 +95,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/search"
                 android:contentDescription=""
+                app:srcCompat="@drawable/search"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
@@ -126,8 +104,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/profile"
                 android:contentDescription=""
+                app:srcCompat="@drawable/profile"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
@@ -135,8 +113,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/home"
                 android:contentDescription=""
+                app:srcCompat="@drawable/home"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#1c2b7e</color>
     <color name="colorPrimaryDark">#5266e8</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="Amber1">#FFD54F</color>
+    <color name="Amber1">#ffd54f</color>
     <color name="Amberdark">#ed7926</color>
     <color name="AmberBackground">#cfd8dc</color>
     <color name="AmberYello">#ffd640</color>
