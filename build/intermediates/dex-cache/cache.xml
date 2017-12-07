@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/.android/build-cache/e0e6f003c7aaace04a346cfb61e09fb87081b41e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3d6951cb416ebf8c66a32b9480808ca247b68344">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b9a7f2b5208d2a8e71ca889094a86364ac05fcac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/.android/build-cache/8a47ea7dddf1ec987e0d3a6f860ed88fb3373228/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_823ffeaa8bc7f0b2f7794b7ed58832591d29308b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c540ffdd7978b61e4b4957f04642380e34495bbe">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c8599659a2f4d1b51c8ec9a62ca5393482cdbe0d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/Desktop/Bproject/app/jars/picasso/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/2/picasso-2.5.2_1024d623fff581fa8655e2d53e52ad08ec5de036/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/.android/build-cache/89eaa49f11087abe20c54d75a0ff2599a8acb456/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94fca868854457ede6df15c902938468c71d579e">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_75e567f777e5e90fc24eb3cb9a85b2b22da99667/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/.android/build-cache/d5cfc0fa07a2eb690cd49e72adb5f3c29a21c8fe/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9c2f179dcdf9a58f5e3ce96848df9551f33571a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/Desktop/Bproject/app/jars/unirest/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25b7a697a7455e793e2d5d11853e0ceab67c0013">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/2/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid_89f7dbfa4f39bc84c96f00e9f61fad5f9cff8a38/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/.android/build-cache/16d2e349e77429cd507e038e9dd494d75aa4c8b5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="48532a016bb0dfbe7970c147ce784598a515406b">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_67e8ee7b35326c078a63ba6473dbf7e52a3c677f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/.android/build-cache/f61bda7a8a5e786ad5a6302666826bf05cc75954/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ce9112e08a027c8620ae693983e38cdbb9f6371b">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_275513828b43cc9273a0af0092b206e9cedc7d52/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/.android/build-cache/f1e4d70080402abfd10bfcc2f6c77c232eb2d8fe/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a61e7010aa7be5da53cd1bc5279630510c9a4912">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_346078259d0391cd7d24d5e2c627883e9e5ee299/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/.android/build-cache/0fe47d69e918ff87b5d7fe07a825c3252cb7f95d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d5cbbbfe040201c7569478b70a13b58fd11aab4">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5d7ca5818ba69499f7cf025489043ee71f775f6a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/.android/build-cache/52c1380551d59d61e3576dac9a60984a972db77b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0e301f24b283f14b564f660c9abe863af6be5896">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_44b3d1e8d0ca28a49af014a4f3b75870b1db9ebe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bb46d7dbee2e9fdc74502788b32def45492ea4b1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/.android/build-cache/55957d5be71709439b29dcf5cab1de97fe063aa9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
+        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_16a680c7dfb8f499f8101b5e539f481ae33b40b4/classes.dex" />
+    </item>
+
+</items>
