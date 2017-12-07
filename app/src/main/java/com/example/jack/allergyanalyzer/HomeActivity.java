@@ -19,7 +19,7 @@ public class HomeActivity extends AppCompatActivity {
     private ImageButton b1; //search button
     private ImageButton b2; //profile button
     private ImageButton b3; //Home button
-
+    private ImageButton b4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +28,7 @@ public class HomeActivity extends AppCompatActivity {
         b1=(ImageButton)findViewById(R.id.imageButton5);
         b2=(ImageButton)findViewById(R.id.imageButton9);
         b3=(ImageButton)findViewById(R.id.imageButton4);
-
+        b4=(ImageButton)findViewById(R.id.imageButton12);
 
 
         //-------------------------------------------------
@@ -64,6 +64,18 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent i = new Intent(getApplicationContext(),HomeActivity.class);
+                startActivity(i);
+            }
+        });
+        //-------------------------------------------------
+        b4.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This method enable us to click on profile button and move to MainActivity
+             */
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
                 startActivity(i);
             }
         });

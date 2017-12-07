@@ -3,39 +3,39 @@
 
     <item
         is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/algaalaaali/Desktop/b/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bb46d7dbee2e9fdc74502788b32def45492ea4b1/classes.dex" />
+        <dex dex="/Users/algaalaaali/Desktop/b/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_309f812e3256703b50bc654adf464fe9abeafc6d/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ff200d960613b58b4b33d69e008485043e9d48e7">
-        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c8599659a2f4d1b51c8ec9a62ca5393482cdbe0d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/Bproject/app/jars/picasso/picasso-2.5.2.jar"
+        jar="/Users/algaalaaali/Desktop/b/app/jars/picasso/picasso-2.5.2.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/2/picasso-2.5.2_1024d623fff581fa8655e2d53e52ad08ec5de036/classes.dex" />
+        <dex dex="/Users/algaalaaali/Desktop/b/app/build/intermediates/transforms/dex/debug/folders/1000/2/picasso-2.5.2_d692eaf379d1427c92efa63fa336ecc1b246a42c/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/Bproject/app/jars/unirest/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid.jar"
+        jar="/Users/algaalaaali/Desktop/b/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3515d4402cc13e59a4a1961a61343906d4858d53">
+        <dex dex="/Users/algaalaaali/Desktop/b/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e0c25f2fd7d72eb212b4e37b34b371d8bd6f437c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/algaalaaali/Desktop/b/app/jars/unirest/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="25b7a697a7455e793e2d5d11853e0ceab67c0013">
-        <dex dex="/Users/algaalaaali/Desktop/Bproject/app/build/intermediates/transforms/dex/debug/folders/1000/2/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid_89f7dbfa4f39bc84c96f00e9f61fad5f9cff8a38/classes.dex" />
+        <dex dex="/Users/algaalaaali/Desktop/b/app/build/intermediates/transforms/dex/debug/folders/1000/2/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid_15512ee72954fcc33d278a89c25d62f10ab4d921/classes.dex" />
     </item>
 
 </items>
