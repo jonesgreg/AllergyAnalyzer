@@ -10,7 +10,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_marginTop="-42dp"
+        android:layout_marginTop="-30dp"
         android:background="@color/AmberBackground"
         android:visibility="visible"
 
@@ -20,39 +20,8 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="89dp"
-            android:background="@color/common_google_signin_btn_text_dark_disabled"
-            android:text="Hello ,"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="30sp"
-            android:visibility="visible"
-            app:layout_constraintLeft_toLeftOf="parent"
-            tools:ignore="HardcodedText,RtlHardcoded"
-            tools:layout_editor_absoluteY="37dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/textView4"
-            android:alpha="50"
-            android:background="@color/AmberBackground"
-            android:text="Do you think that what you about to eat will cause you allergy !? Let's help you to find out !!"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textEditNoPasteWindowLayout="@color/colorPrimaryDark"
-            android:visibility="visible"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded" />
-
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -61,62 +30,90 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentStart="true"
             android:orientation="horizontal"
-            tools:ignore="RtlHardcoded">
+            tools:ignore="RtlHardcoded,UselessParent">
 
-            <ImageButton
-                android:id="@+id/imageButton8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription=""
-                app:srcCompat="@drawable/about"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/imageButton7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription=""
-                app:srcCompat="@drawable/help"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/imageButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription=""
-                app:srcCompat="@drawable/groups"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription=""
-                app:srcCompat="@drawable/search"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/imageButton9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription=""
-                app:srcCompat="@drawable/profile"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription=""
-                app:srcCompat="@drawable/home"
-                tools:ignore="ContentDescription" />
         </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView8"
+            android:layout_marginEnd="31dp"
+            android:layout_marginTop="77dp"
+            android:layout_toStartOf="@+id/imageButton9"
+            android:layout_weight="1"
+            android:contentDescription=""
+            app:srcCompat="@drawable/home"
+            tools:ignore="ContentDescription,ObsoleteLayoutParam" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageButton4"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:contentDescription=""
+            app:srcCompat="@drawable/profile"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageButton9"
+            android:layout_marginStart="23dp"
+            android:layout_toEndOf="@+id/imageButton9"
+            android:layout_weight="1"
+            android:contentDescription=""
+            app:srcCompat="@drawable/search"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageButton9"
+            android:layout_below="@+id/imageButton9"
+            android:layout_marginTop="37dp"
+            android:layout_weight="1"
+            android:contentDescription=""
+            app:srcCompat="@drawable/groups"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription=""
+            app:srcCompat="@drawable/help"
+            tools:ignore="ContentDescription,ObsoleteLayoutParam"
+            android:layout_alignBottom="@+id/imageButton6"
+            android:layout_alignStart="@+id/imageButton4" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageButton5"
+            android:layout_alignTop="@+id/imageButton6"
+            android:layout_weight="1"
+            android:contentDescription=""
+            app:srcCompat="@drawable/about"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/allergy" />
 
     </RelativeLayout>
 

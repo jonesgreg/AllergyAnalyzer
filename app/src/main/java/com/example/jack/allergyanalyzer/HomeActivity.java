@@ -18,6 +18,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private ImageButton b1; //search button
     private ImageButton b2; //profile button
+    private ImageButton b3; //Home button
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class HomeActivity extends AppCompatActivity {
 
         b1=(ImageButton)findViewById(R.id.imageButton5);
         b2=(ImageButton)findViewById(R.id.imageButton9);
+        b3=(ImageButton)findViewById(R.id.imageButton4);
 
 
 
@@ -49,10 +51,22 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
+                Intent i = new Intent(getApplicationContext(),Profile2Activity.class);
                 startActivity(i);
             }
         });
         //-------------------------------------------------
+        b3.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This method enable us to click on profile button and move to MainActivity
+             */
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent i = new Intent(getApplicationContext(),HomeActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 }
