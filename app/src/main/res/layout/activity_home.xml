@@ -106,14 +106,17 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="72dp"
             android:adjustViewBounds="true"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/allergy" />
+            android:scaleType="fitEnd"
+            android:visibility="visible"
+            app:srcCompat="@drawable/allergy"
+            android:layout_alignStart="@+id/imageButton4"
+            android:layout_alignEnd="@+id/imageButton5" />
 
     </RelativeLayout>
 

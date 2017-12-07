@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#1c2b7e</color>
+    <color name="colorPrimary">#f0a63a</color>
     <color name="colorPrimaryDark">#5266e8</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="Amber1">#ffd54f</color>
-    <color name="Amberdark">#ea9254</color>
-    <color name="AmberBackground">#cfd8dc</color>
+    <color name="colorAccent">#77558a</color>
+    <color name="Amber1">#fbd461</color>
+    <color name="Amberdark">#fbbb00</color>
+    <color name="AmberBackground">#ffffff</color>
     <color name="AmberYello">#ffd640</color>
-    <color name="green">#9cbd29</color>
-    <color name="blue">#88e7f3</color>
+    <color name="green">#93bc32</color>
+    <color name="blue">#1c1e1e</color>
+    <color name="primary_material_light">#bdff9800</color>
 
     #
 </resources>
