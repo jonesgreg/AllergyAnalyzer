@@ -25,11 +25,10 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        b1=(ImageButton)findViewById(R.id.imageButton5);
-        b2=(ImageButton)findViewById(R.id.imageButton9);
+        b1=(ImageButton)findViewById(R.id.imageButton2);
+        b2=(ImageButton)findViewById(R.id.imageButton3);
         b3=(ImageButton)findViewById(R.id.imageButton4);
-        b4=(ImageButton)findViewById(R.id.imageButton12);
-
+        b4=(ImageButton)findViewById(R.id.imageButton5);
 
         //-------------------------------------------------
         b1.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(),SavedProfileActivity.class);
+                Intent i = new Intent(getApplicationContext(),searchActivity.class);
                 startActivity(i);
             }
         });
@@ -63,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(),HomeActivity.class);
+                Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
                 startActivity(i);
             }
         });
