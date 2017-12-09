@@ -24,6 +24,7 @@ public class searchActivity extends AppCompatActivity {
 
     private ImageView im1;
     private ImageView im2;
+    private ImageView im3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class searchActivity extends AppCompatActivity {
 
         im1 = (ImageView) findViewById(R.id.imageView5);
         im2 = (ImageView) findViewById(R.id.imageView6);
-
+        im3 = (ImageView) findViewById(R.id.imageView8);
         //-------------------------------------------------
         im1.setOnClickListener(new View.OnClickListener() {
             /**
@@ -54,6 +55,18 @@ public class searchActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent i = new Intent(getApplicationContext(), RecSearchActivity.class);
+                startActivity(i);
+            }
+        });
+        //------------------------------------------------
+        im3.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This method enable us to click on search button and move to searchActivity
+             */
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent i = new Intent(getApplicationContext(), MapsActivity.class);
                 startActivity(i);
             }
         });
