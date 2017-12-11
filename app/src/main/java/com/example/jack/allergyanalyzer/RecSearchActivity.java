@@ -38,7 +38,6 @@ public class RecSearchActivity extends AppCompatActivity implements View.OnClick
 
             mBound = true;
             Log.e("  in onServiceConnected", "conntected!");
-            Log.e("  in onServiceConnected", name);
 
         }
 
