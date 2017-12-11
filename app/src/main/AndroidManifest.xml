@@ -20,7 +20,7 @@
         android:theme="@style/AppTheme">
         <service
             android:name=".PersistentDataService"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -33,7 +33,7 @@
         <activity
             android:name=".ProfileActivity"
             android:label="Login"
-            android:parentActivityName=".HomeActivity"></activity>
+            android:parentActivityName=".HomeActivity" />
         <activity android:name=".Profile2Activity" />
         <activity android:name=".IngSearchActivity" />
         <activity android:name=".searchActivity" />
@@ -44,10 +44,10 @@
         <activity
             android:name=".SignUpActivity"
             android:label="Sign Up"
-            android:parentActivityName=".ProfileActivity"></activity>
+            android:parentActivityName=".ProfileActivity" />
         <activity
             android:name=".LoginActivity"
-            android:parentActivityName=".ProfileActivity"></activity>
+            android:parentActivityName=".ProfileActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -62,7 +62,11 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".AboutActivity"
+                  android:parentActivityName=".HomeActivity"
+                  android:label="About Allergy Analyzer">
+        </activity>
     </application>
 
 </manifest>

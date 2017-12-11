@@ -1,9 +1,11 @@
 package com.example.jack.allergyanalyzer;
 
+import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
+import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class RecSearchActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -22,6 +25,7 @@ public class RecSearchActivity extends AppCompatActivity implements View.OnClick
     public boolean validIngredient;
     //passing through JSON
     public String ingredientsString;
+    private Button voiceSearch;
 
     String name;
     ArrayList<String> allergies;
@@ -48,6 +52,7 @@ public class RecSearchActivity extends AppCompatActivity implements View.OnClick
     };
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,9 +70,38 @@ public class RecSearchActivity extends AppCompatActivity implements View.OnClick
 
         editTextIngredients = (EditText) findViewById(R.id.editTextIngredients);
         searchButton = (Button) findViewById(R.id.buttonSearch);
-
         searchButton.setOnClickListener(this);
 
+        voiceSearch = (Button) findViewById(R.id.voiceSearch);
+        voiceSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
+                try {
+                    startActivityForResult(intent, 200);
+
+                }catch (ActivityNotFoundException a) {
+                    Toast.makeText(getApplicationContext(), "intent problem", Toast.LENGTH_SHORT).show();
+
+                }
+
+            }
+        });
+
+
+    }
+    /**
+     * Receiving User's results from the google voice API
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK && data != null) { ///Check which request we're responding to
+            ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            editTextIngredients.setText(result.get(0));
+        }
     }
 
     @Override

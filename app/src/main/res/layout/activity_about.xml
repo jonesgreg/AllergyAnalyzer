@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jack.allergyanalyzer.AboutActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Do you have a food allergy and find it hard to find delicious food recipes online that support your allergy type? Well, Allergy Analyzer may just be your new best friend. This app was built to help people like you who have developed an allergy to a certain food. As the only app in the business to deal with this type of problem, Allergy Analyzer is personalized to fit your needs. It’s simple: just create a profile, list your allergies, and then enter a search of any recipe you want to make. Allergy Analyzer will search the web for trusted and reliable recipes that cater to your allergy. It’s that easy! Created by Jack Coleman, Batool Aljedani, Greg Jones, and Justin Branco. Copyright © 2017 Team B.  "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

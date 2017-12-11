@@ -3,75 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/newB/app/jars/picasso/picasso-2.5.2.jar"
-        jumboMode="true"
+        jar="/Users/gregoryjones/Desktop/TeamB/app/jars/picasso/picasso-2.5.2.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/algaalaaali/Desktop/newB/app/build/intermediates/transforms/dex/debug/folders/1000/2/picasso-2.5.2_3bc39e516e7bfe382cb1ef935ab883c328c0b0f5/classes.dex" />
+        <dex dex="/Users/gregoryjones/Desktop/TeamB/app/build/intermediates/transforms/dex/debug/folders/1000/2/picasso-2.5.2_d1e99c86199a0da0247f6770b8acfa3b66f7540e/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/b/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/algaalaaali/Desktop/b/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_309f812e3256703b50bc654adf464fe9abeafc6d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/b/app/jars/picasso/picasso-2.5.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/algaalaaali/Desktop/b/app/build/intermediates/transforms/dex/debug/folders/1000/2/picasso-2.5.2_d692eaf379d1427c92efa63fa336ecc1b246a42c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/b/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3515d4402cc13e59a4a1961a61343906d4858d53">
-        <dex dex="/Users/algaalaaali/Desktop/b/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e0c25f2fd7d72eb212b4e37b34b371d8bd6f437c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/newB/app/jars/unirest/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid.jar"
-        jumboMode="true"
+        jar="/Users/gregoryjones/Desktop/TeamB/app/jars/unirest/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="25b7a697a7455e793e2d5d11853e0ceab67c0013">
-        <dex dex="/Users/algaalaaali/Desktop/newB/app/build/intermediates/transforms/dex/debug/folders/1000/2/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid_29aa9dd7d11dc531641adebaf644f5dac637589a/classes.dex" />
+        <dex dex="/Users/gregoryjones/Desktop/TeamB/app/build/intermediates/transforms/dex/debug/folders/1000/2/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid_0bbf55358cde3f6a1a329774535414338d9f7cfd/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/b/app/jars/unirest/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid.jar"
-        jumboMode="true"
+        jar="/Users/gregoryjones/.android/build-cache/48bdf4ee1c475fb589a1526a5adc9448db919440/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="25b7a697a7455e793e2d5d11853e0ceab67c0013">
-        <dex dex="/Users/algaalaaali/Desktop/b/app/build/intermediates/transforms/dex/debug/folders/1000/2/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid_15512ee72954fcc33d278a89c25d62f10ab4d921/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/newB/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/algaalaaali/Desktop/newB/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_cd4838a329c5540ebb96d7dee209035c636c713c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/algaalaaali/Desktop/newB/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3b8f83bd8604613d2b2891a157b85e9ddc8f1671">
-        <dex dex="/Users/algaalaaali/Desktop/newB/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1661993ca7ac6e0bc893723f33c372ef268c056d/classes.dex" />
+        sha1="6da05b7498da036b5b37c3beb861cd2060929dcd">
+        <dex dex="/Users/gregoryjones/Desktop/TeamB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_93da68e02fd82881efd345ceb653f71972982fec/classes.dex" />
     </item>
 
 </items>
