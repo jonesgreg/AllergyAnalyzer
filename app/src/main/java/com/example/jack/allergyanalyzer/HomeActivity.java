@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
+                Intent i = new Intent(getApplicationContext(),SavedProfileActivity.class);
                 startActivity(i);
             }
         });
