@@ -31,11 +31,19 @@ public class searchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        im1 = (ImageView) findViewById(R.id.imageView5);
         im2 = (ImageView) findViewById(R.id.imageView6);
         im3 = (ImageView) findViewById(R.id.imageView8);
         //-------------------------------------------------
 
         //------------------------------------------------
+        im1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), RecSearchActivity.class);
+                startActivity(i);
+            }
+        });
         im2.setOnClickListener(new View.OnClickListener() {
             /**
              * This method enable us to click on search button and move to searchActivity
@@ -43,7 +51,7 @@ public class searchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(), RecSearchActivity.class);
+                Intent i = new Intent(getApplicationContext(), RecIntolSearchAcivity.class);
                 startActivity(i);
             }
         });

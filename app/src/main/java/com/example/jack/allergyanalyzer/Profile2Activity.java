@@ -23,17 +23,19 @@ public class Profile2Activity extends ListActivity {
 
     //String array holding the list of allergies
     String[] Allergy= {
-            "Corn",
-            "Egg",
-            "Fish",
-            "Meat",
-            "Milk",
-            "Peanut",
-            "Shellfish",
-            "Soy",
-            "Tree-Nut",
-            "Gluten",
-            "Onions",};
+            "dairy",
+            "egg",
+            "gluten",
+            "peanut",
+            "sesame",
+            "seafood",
+            "shellfish",
+            "soy",
+            "sulfite",
+            "tree-nut",
+            "wheat"};
+
+
 
     Intent activityIntent;
 

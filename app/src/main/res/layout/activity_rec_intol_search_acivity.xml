@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context="com.example.jack.allergyanalyzer.RecSearchActivity">
+    tools:context="com.example.jack.allergyanalyzer.RecIntolSearchAcivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             <EditText
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:hint="Input recipe"
+                android:hint="Search Here (separate by commas)"
                 android:layout_weight="1"
                 android:id="@+id/editTextIngredients"/>
 

@@ -22,6 +22,15 @@
         android:weightSum="1">
 
         <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="439dp"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:contentDescription=""
+            app:srcCompat="@drawable/rec2"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
             android:id="@+id/imageView6"
             android:layout_width="439dp"
             android:layout_height="wrap_content"

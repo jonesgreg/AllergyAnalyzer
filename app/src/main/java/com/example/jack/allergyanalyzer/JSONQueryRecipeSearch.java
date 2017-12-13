@@ -24,7 +24,7 @@ import java.util.List;
 public class JSONQueryRecipeSearch extends AsyncTask
 {
     private String query;
-    private String url;
+    private String url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?";
     private ArrayList<Dish> dishes;
     private Context context;
     private JSONArray jsonArray;
@@ -32,14 +32,33 @@ public class JSONQueryRecipeSearch extends AsyncTask
     public JSONQueryRecipeSearch (String q, Context c){
         Log.d("Constructor", "in here!");
         this.query = q;
-        this.url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=10&offset=0&query=";
+        this.url += "number=10&offset=0&query=" + this.query;
         this.dishes = new ArrayList<Dish>(10);
         this.context = c;
     }
-    public void setUrl()
+    public JSONQueryRecipeSearch(String q, Context c, ArrayList<String> a)
     {
-        this.url+=this.query;
+        this.query = q;
+        this.dishes = new ArrayList<Dish>(10);
+        this.context = c;
+
+        this.url += "intolerances=";
+        this.url += a.get(0);
+        if(a.size() > 1)
+            for (int i = 1; i < a.size(); i++)
+                this.url += "%2C" + a.get(i);
+        this.url += "&number=10&offset=0&query="+this.query;
+
+
     }
+    /*public void setUrl()
+    {
+        this.url+= "number=10&offset=0&query=" + this.query;
+    }
+    public void setIntolUrl()
+    {
+
+    }*/
     public List<Dish> getDishes(){
         return this.dishes;
     }
