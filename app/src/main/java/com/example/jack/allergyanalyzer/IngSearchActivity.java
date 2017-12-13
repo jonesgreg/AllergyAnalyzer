@@ -125,8 +125,8 @@ public class IngSearchActivity extends AppCompatActivity implements View.OnClick
                 if (ingredientsString != "") {
                     //start a new intent to a list
                     AppState state = AppState.getInstance();
-                    state.setingredients(ingredientsString);
-                    final String[] recipeList = state.getIngredients().split(",");
+                    state.setQuery(ingredientsString);
+                    final String[] recipeList = state.getQuery().split(",");
                     JSONQuery query = new JSONQuery(recipeList, getApplicationContext());
                     query.setUrl();
                     query.execute();

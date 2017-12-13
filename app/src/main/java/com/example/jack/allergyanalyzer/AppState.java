@@ -17,7 +17,7 @@ public class AppState extends Application {
     private static final AppState ourInstance = new AppState();
     private static String TAG = "AppState";
 
-    private String ingredientString;
+    private String query;
     private List<Dish> dishes;
     private int position;
     private JSONArray currentRecipe;
@@ -28,7 +28,7 @@ public class AppState extends Application {
 
     public AppState() {
         if (getInstance() == null) {
-            ingredientString = "";
+            query = "";
             position = 0;
             currentRecipe = null;
             Log.i(TAG, "Appstate init");
@@ -37,13 +37,11 @@ public class AppState extends Application {
         }
     }
 
-    public String getIngredients() {
-        return ingredientString;
+    public String getQuery() {
+        return query;
     }
 
-    public void setingredients(String list) {
-        ingredientString = list;
-    }
+    public void setQuery(String list) {query = list;}
 
     public void setDishes(List<Dish> list) {
         dishes = list;

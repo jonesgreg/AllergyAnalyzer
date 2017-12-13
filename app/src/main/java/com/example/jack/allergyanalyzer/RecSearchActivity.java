@@ -19,12 +19,12 @@ import java.util.Locale;
 
 public class RecSearchActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText editTextIngredients;
+    private EditText queryTxt;
     private Button searchButton;
     //check boolean, true get the strings
     public boolean validIngredient;
     //passing through JSON
-    public String ingredientsString;
+    public String query;
     private Button voiceSearch;
 
     String name;
@@ -68,7 +68,7 @@ public class RecSearchActivity extends AppCompatActivity implements View.OnClick
 
         this.validIngredient = false;
 
-        editTextIngredients = (EditText) findViewById(R.id.editTextIngredients);
+        queryTxt = (EditText) findViewById(R.id.editTextIngredients);
         searchButton = (Button) findViewById(R.id.buttonSearch);
         searchButton.setOnClickListener(this);
 
@@ -100,7 +100,7 @@ public class RecSearchActivity extends AppCompatActivity implements View.OnClick
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == RESULT_OK && data != null) { ///Check which request we're responding to
             ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-            editTextIngredients.setText(result.get(0));
+            queryTxt.setText(result.get(0));
         }
     }
 
@@ -109,7 +109,7 @@ public class RecSearchActivity extends AppCompatActivity implements View.OnClick
     {
         if(name != null && allergies != null)
         {
-            Log.e(" onClick Rec", name);
+           /* Log.e(" onClick Rec", name);
             ingredientsString = editTextIngredients.getText().toString();
             if (ingredientsString != "") {
                 //start a new intent to a list
@@ -123,7 +123,20 @@ public class RecSearchActivity extends AppCompatActivity implements View.OnClick
                 Toast.makeText(this,
                         "Please enter some recipes",
                         Toast.LENGTH_SHORT).show();
-            }
+            }*/
+           query = queryTxt.getText().toString();
+           if(query != "")
+           {
+               AppState state = AppState.getInstance();
+               state.setQuery(query);
+               JSONQueryRecipeSearch  startQuery = new JSONQueryRecipeSearch(query, getApplicationContext());
+               startQuery.setUrl();
+               startQuery.execute();
+           }
+           else
+           {
+               Toast.makeText(this, "Please enter some recipes", Toast.LENGTH_SHORT).show();
+           }
         }
         else
         {
