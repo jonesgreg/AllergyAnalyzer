@@ -37,7 +37,6 @@
         <activity android:name=".Profile2Activity" />
         <activity android:name=".searchActivity" />
         <activity android:name=".RecSearchActivity" />
-        <activity android:name=".RecIntolSearchAcivity"/>
         <activity android:name=".RecipeListActivity" />
         <activity android:name=".RecipeFragmentFrame" />
         <activity android:name=".SavedProfileActivity" />
