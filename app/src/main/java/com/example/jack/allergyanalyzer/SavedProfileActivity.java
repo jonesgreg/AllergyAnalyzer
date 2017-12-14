@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +30,7 @@ public class SavedProfileActivity extends AppCompatActivity {
     String name;
     String email;
     boolean gender;
+    RadioGroup genderRadioGroup;
     ArrayList<String> allergies;
 
     private ServiceConnection mConnection = new ServiceConnection() {
@@ -56,6 +59,24 @@ public class SavedProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved_profile);
 
+        TextView userNameView = (TextView)findViewById(R.id.textView7);
+        TextView emailView    = (TextView)findViewById(R.id.textView14);
+        TextView genderView   = (TextView)findViewById(R.id.textView16);
+        TextView allergyView  = (TextView)findViewById(R.id.textView18);
+        Intent profIntent = getIntent();
+        Bundle profBundle = profIntent.getExtras();
+
+        if (profBundle != null) {
+            String userName = (String) profBundle.get("userName");
+            userNameView.setText(userName);
+
+            String email = (String) profBundle.get("email");
+            emailView.setText(email);
+
+            String allergy = (String) profBundle.get("allergies");
+            allergyView.setText(allergy);
+        }
+
 
         Intent intent = new Intent(this, PersistentDataService.class);
 
@@ -66,7 +87,9 @@ public class SavedProfileActivity extends AppCompatActivity {
         }
         else
         {
-            /* TODO make a text feild that informs the user they must login to view login information or something */
+            /* TODO make a text field that informs the user they must login to view login information or something */
+            Toast.makeText(SavedProfileActivity.this, "Must login before viewing profile",
+                    Toast.LENGTH_LONG).show();
         }
 
         Log.e("     In On Create", "first checkpoint reached");
@@ -77,6 +100,7 @@ public class SavedProfileActivity extends AppCompatActivity {
         /*
         @TODO put all of your code to show profile information here.
          */
+
     }
 
 }

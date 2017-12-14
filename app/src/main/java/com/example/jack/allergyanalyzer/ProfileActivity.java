@@ -31,10 +31,11 @@ public class ProfileActivity extends AppCompatActivity {
     Intent loginIntent;
     Intent serviceIntent;
     Intent activityIntent;
+    Intent savedProfileIntent;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
@@ -91,6 +92,12 @@ public class ProfileActivity extends AppCompatActivity {
 
                             serviceIntent = new Intent(getApplicationContext(),PersistentDataService.class);
                             activityIntent = new Intent(getApplicationContext(),HomeActivity.class);
+                            savedProfileIntent = new Intent(getApplicationContext(), SavedProfileActivity.class);
+
+                            savedProfileIntent.putExtra("userName", user.getName());
+                            savedProfileIntent.putExtra("email", user.getEmail());
+                            savedProfileIntent.putExtra("gender", user.getGender());
+                            savedProfileIntent.putExtra("allergies", user.getAllergies());
 
                             serviceIntent.putExtra("name",user.getName());
                             serviceIntent.putExtra("email",user.getEmail());
@@ -99,6 +106,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                             startService(serviceIntent);
                             startActivity(activityIntent);
+                            startActivity(savedProfileIntent);
 
                             Log.e("Name ",user.getName());
                             Log.e("Pass ",user.getPass());
