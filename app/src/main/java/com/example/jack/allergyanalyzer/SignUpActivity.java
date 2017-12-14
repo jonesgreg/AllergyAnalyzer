@@ -63,10 +63,12 @@ public class SignUpActivity extends AppCompatActivity {
         public void onCheckedChanged(RadioGroup radioGroup, int i) {
             if(i == R.id.radiobutton_male)
             {
+                gender = true;
                 radioBtnWasPressed = true;
             }
             else if(i == R.id.radiobutton_female)
             {
+                gender = false;
                 radioBtnWasPressed = true;
             }
         }

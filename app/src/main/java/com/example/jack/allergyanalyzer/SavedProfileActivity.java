@@ -30,7 +30,6 @@ public class SavedProfileActivity extends AppCompatActivity {
     String name;
     String email;
     boolean gender;
-    RadioGroup genderRadioGroup;
     ArrayList<String> allergies;
 
     private ServiceConnection mConnection = new ServiceConnection() {
@@ -59,25 +58,6 @@ public class SavedProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved_profile);
 
-        TextView userNameView = (TextView)findViewById(R.id.textView7);
-        TextView emailView    = (TextView)findViewById(R.id.textView14);
-        TextView genderView   = (TextView)findViewById(R.id.textView16);
-        TextView allergyView  = (TextView)findViewById(R.id.textView18);
-        Intent profIntent = getIntent();
-        Bundle profBundle = profIntent.getExtras();
-
-        if (profBundle != null) {
-            String userName = (String) profBundle.get("userName");
-            userNameView.setText(userName);
-
-            String email = (String) profBundle.get("email");
-            emailView.setText(email);
-
-            String allergy = (String) profBundle.get("allergies");
-            allergyView.setText(allergy);
-        }
-
-
         Intent intent = new Intent(this, PersistentDataService.class);
 
 
@@ -94,12 +74,45 @@ public class SavedProfileActivity extends AppCompatActivity {
 
         Log.e("     In On Create", "first checkpoint reached");
 
+        init();
     }
+
+
     protected void init()
     {
         /*
         @TODO put all of your code to show profile information here.
          */
+        TextView userNameView = (TextView)findViewById(R.id.textView7);
+        TextView emailView    = (TextView)findViewById(R.id.textView14);
+        TextView genderView   = (TextView)findViewById(R.id.textView16);
+        //TextView allergyView  = (TextView)findViewById(R.id.textView18);
+
+        Intent profIntent = getIntent();
+        Bundle profBundle = profIntent.getExtras();
+
+        Intent gendIntent = getIntent();
+        Bundle gendBundle = gendIntent.getExtras();
+
+        if (profBundle != null) {
+            String userName = (String) profBundle.get("userName");
+            userNameView.setText(userName);
+
+            String email = (String) profBundle.get("email");
+            emailView.setText(email);
+
+            Boolean gender = (Boolean) profBundle.get("gender");
+
+            if (gender) {
+                genderView.setText("Male");
+            }
+            else {
+                genderView.setText("Female");
+            }
+
+            //String allergy = (String) profBundle.get("allergies");
+            //allergyView.setText(allergy);
+        }
 
     }
 
