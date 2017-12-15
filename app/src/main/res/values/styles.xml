@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
@@ -12,7 +12,7 @@
         <item name="android:textColorPrimary">@color/blue</item>
         <item name="android:textColorPrimaryInverse">@color/common_google_signin_btn_text_light
         </item>
-        <item name="android:colorBackground">@color/AmberBackground</item>
+
     </style>
 
 

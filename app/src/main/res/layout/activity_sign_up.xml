@@ -7,71 +7,162 @@
     tools:context="com.example.jack.allergyanalyzer.SignUpActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="270dp"
-        android:layout_height="219dp"
-        android:layout_marginBottom="64dp"
-        android:layout_marginEnd="143dp"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="54dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText_userName2"
+        android:id="@+id/imageView4"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_userName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/allergy" />
+        app:layout_constraintVertical_bias="0.26"
+        app:srcCompat="@drawable/_allergylogo" />
+
+
+    <ImageView
+        android:id="@+id/imageBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="204dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="true"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_userName2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/r" />
+
+    <ImageView
+        android:id="@+id/imageBox3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="204dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="true"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_password2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/r" />
+
+    <ImageView
+        android:id="@+id/imageBox2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="284dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="true"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/r" />
 
     <EditText
         android:id="@+id/editText_userName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginEnd="99dp"
-        android:layout_marginStart="98dp"
+        android:layout_marginStart="10dp"
         android:ems="10"
         android:hint="@string/username_message"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editText_password2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/editText_password2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginEnd="99dp"
-        android:layout_marginStart="98dp"
+        android:layout_marginStart="10dp"
         android:ems="10"
         android:hint="@string/password_message"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/editText_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@null" />
 
     <EditText
         android:id="@+id/editText_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginEnd="99dp"
-        android:layout_marginStart="98dp"
+        android:layout_marginStart="10dp"
         android:ems="10"
         android:hint="@string/email_message"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/radiogroup_gender"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/createaccountbutton"
         android:text="@string/button_submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="@string/button_submit" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="424dp"
+        android:layout_marginRight="156dp"
+        android:text="SIGN UP"
+        android:textAllCaps="true"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="380dp"
+        android:layout_marginRight="144dp"
+        android:text="Nice to meet you"
+
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
 
     <RadioGroup
         android:id="@+id/radiogroup_gender"
@@ -103,11 +194,11 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="79dp"
-        android:background="@color/colorAccent"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

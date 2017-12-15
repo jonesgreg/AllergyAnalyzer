@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.jack.allergyanalyzer.ProfileActivity">
 
-    <android.support.constraint.ConstraintLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
+
 
         <EditText
             android:id="@+id/editText_userName"
@@ -18,15 +19,16 @@
             android:layout_height="46dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginEnd="84dp"
-            android:layout_marginStart="85dp"
+            android:layout_marginEnd="200dp"
+            android:layout_marginStart="90dp"
             android:ems="10"
             android:hint="@string/username_message"
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/editText_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            android:background="#00000000"/>
 
         <Button
             android:id="@+id/button_signUp"
@@ -34,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginStart="16dp"
+            android:background="@drawable/signup"
             android:text="@string/button_signUp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_login"
@@ -47,6 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="16dp"
+            android:background="@drawable/button"
             android:text="@string/button_login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,43 +60,116 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="279dp"
-            android:layout_height="218dp"
+            android:layout_width="327dp"
+            android:layout_height="192dp"
             android:layout_marginEnd="117dp"
             android:layout_marginStart="117dp"
             app:layout_constraintBottom_toTopOf="@+id/editText_userName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/allergy" />
+            app:layout_constraintVertical_bias="0.26"
+            app:srcCompat="@drawable/_allergylogo" />
+
+        <ImageView
+            android:id="@+id/imageBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="true"
+            app:layout_constraintBottom_toBottomOf="@id/editText_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.78"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95"
+            app:srcCompat="@drawable/r" />
+
 
         <EditText
             android:id="@+id/editText_password"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:layout_marginEnd="84dp"
-            android:layout_marginStart="85dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="300dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="16dp"
+
+            android:background="#00000000"
             android:ems="10"
             android:hint="@string/password_message"
             android:inputType="textPassword"
+            android:singleLine="false"
             app:layout_constraintBottom_toTopOf="@+id/button_signUp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+
+            app:layout_constraintRight_creator="10"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_userName" />
+
+        <ImageView
+            android:id="@+id/imageBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/editText_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.90999997"
+            app:srcCompat="@drawable/r" />
+
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:background="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:text="LOG IN"
+            android:textAllCaps="true"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.412"
+            app:layout_constraintTop_toBottomOf="@id/imageView2"
+
+            android:layout_marginStart="165dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:text="Good to see you again"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textView23"
+            app:layout_constraintVertical_bias="0.099"
+            app:layout_constraintTop_toBottomOf="@id/imageView2"
+            android:layout_marginStart="130dp"
+            />
+
+
+
 
     </android.support.constraint.ConstraintLayout>
-
-
-</RelativeLayout>

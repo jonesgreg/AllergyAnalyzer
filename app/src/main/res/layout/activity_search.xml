@@ -23,28 +23,30 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="439dp"
-            android:layout_height="wrap_content"
-            android:background="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/recipesearch"
             android:contentDescription=""
-            app:srcCompat="@drawable/rec2"
             tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="439dp"
-            android:layout_height="wrap_content"
-            android:background="@color/green"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/recipesearch"
             android:contentDescription=""
-            app:srcCompat="@drawable/rec2"
             tools:ignore="ContentDescription" />
+
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/common_google_signin_btn_text_dark_pressed"
-            app:srcCompat="@drawable/images"
+            android:layout_width="500dp"
+            android:layout_height="400dp"
+            android:background="@drawable/googlemaps"
+
+            tools:ignore="ContentDescription" />
+
+
             tools:ignore="ContentDescription" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -23,8 +23,9 @@ import java.util.ArrayList;
 public class searchActivity extends AppCompatActivity {
 
     private ImageView im1;
-    //private ImageView im2;
+    private ImageView im2;
     private ImageView im3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,8 @@ public class searchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
         im1 = (ImageView) findViewById(R.id.imageView5);
+
+        im2 = (ImageView) findViewById(R.id.imageView6);
 
         im3 = (ImageView) findViewById(R.id.imageView8);
         //-------------------------------------------------
@@ -44,7 +47,7 @@ public class searchActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        im1.setOnClickListener(new View.OnClickListener() {
+        im2.setOnClickListener(new View.OnClickListener() {
             /**
              * This method enable us to click on search button and move to searchActivity
              */
