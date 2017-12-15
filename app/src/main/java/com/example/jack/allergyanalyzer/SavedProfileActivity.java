@@ -70,7 +70,6 @@ public class SavedProfileActivity extends AppCompatActivity {
         }
         else
         {
-            /* TODO make a text field that informs the user they must login to view login information or something */
             Toast.makeText(SavedProfileActivity.this, "Must login before viewing profile",
                     Toast.LENGTH_LONG).show();
         }
@@ -83,9 +82,6 @@ public class SavedProfileActivity extends AppCompatActivity {
 
     protected void init()
     {
-        /*
-        @TODO put all of your code to show profile information here.
-         */
         TextView userNameView = (TextView)findViewById(R.id.textView7);
         TextView emailView    = (TextView)findViewById(R.id.textView14);
         TextView genderView   = (TextView)findViewById(R.id.textView16);
@@ -109,15 +105,6 @@ public class SavedProfileActivity extends AppCompatActivity {
                 a[i] = allergies.get(i);
             }
 
-            /* TODO Justin please finish this before we present. I dug up this code to help you finish this Job. It is very important it shows the allergies of the user.
-               TODO it is also important to note that you can use the variables at the top of the class normaly because I binded the service to this activity. (I Fixed it)*/
-            //ListView listView = (ListView)findViewById(R.id.recipeListView);
-            ///ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-            //        android.R.layout.simple_list_item_1,
-            //        android.R.id.text1,
-            //        a);
-
-            //listView.setAdapter(adapter);
             StringBuilder sb = new StringBuilder();
             for (String i : allergies) {
                 sb.append(i + ", ");
