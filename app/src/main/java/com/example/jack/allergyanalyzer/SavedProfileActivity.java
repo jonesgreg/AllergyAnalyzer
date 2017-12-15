@@ -89,8 +89,8 @@ public class SavedProfileActivity extends AppCompatActivity {
         TextView userNameView = (TextView)findViewById(R.id.textView7);
         TextView emailView    = (TextView)findViewById(R.id.textView14);
         TextView genderView   = (TextView)findViewById(R.id.textView16);
-
-        //TextView allergyView  = (TextView)findViewById(R.id.textView18);
+        TextView allergyView  = (TextView)findViewById(R.id.scrollingText);
+        allergyView.setSelected(true);
 
         if (name != null) {
             userNameView.setText(name);
@@ -110,15 +110,19 @@ public class SavedProfileActivity extends AppCompatActivity {
             }
 
             /* TODO Justin please finish this before we present. I dug up this code to help you finish this Job. It is very important it shows the allergies of the user.
-               TODO it is also important to note that you can use the variables at the top of the class normaly because I binded the service to this activity. (I Fixed it)
-            ListView listView = (ListView)findViewById(R.id.recipeListView);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                    android.R.layout.simple_list_item_1,
-                    android.R.id.text1,
-                    a);
+               TODO it is also important to note that you can use the variables at the top of the class normaly because I binded the service to this activity. (I Fixed it)*/
+            //ListView listView = (ListView)findViewById(R.id.recipeListView);
+            ///ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+            //        android.R.layout.simple_list_item_1,
+            //        android.R.id.text1,
+            //        a);
 
-            listView.setAdapter(adapter); */
-
+            //listView.setAdapter(adapter);
+            StringBuilder sb = new StringBuilder();
+            for (String i : allergies) {
+                sb.append(i + ", ");
+            }
+            allergyView.setText(sb.toString());
         }
 
     }

@@ -36,46 +36,48 @@
     <TextView
         android:id="@+id/textView19"
         android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="48dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="51dp"
         android:background="@drawable/r"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="52dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="49dp"
         android:background="@drawable/r"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="48dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="58dp"
         android:background="@drawable/r"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_height="58dp"
         android:layout_marginBottom="16dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/r"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
         android:id="@+id/textView6"
@@ -100,8 +102,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.312"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:layout_constraintVertical_bias="0.478" />
 
     <TextView
         android:id="@+id/textView13"
@@ -119,15 +123,17 @@
         android:id="@+id/textView14"
         android:layout_width="211dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="58dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="47dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="8dp"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintBottom_toTopOf="@+id/textView21"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView15"
@@ -145,13 +151,14 @@
         android:id="@+id/textView16"
         android:layout_width="211dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="74dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="47dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="71dp"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.796"
         app:layout_constraintStart_toEndOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -168,17 +175,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/scrollingText"
         android:layout_width="211dp"
         android:layout_height="32dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="47dp"
         android:layout_marginTop="65dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"/>
 
 </android.support.constraint.ConstraintLayout>
 
