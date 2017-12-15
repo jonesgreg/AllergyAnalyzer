@@ -26,7 +26,7 @@
             <EditText
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:hint="Input recipe"
+                android:hint="Search Here"
                 android:layout_weight="1"
                 android:id="@+id/editTextIngredients"/>
 
@@ -78,10 +78,16 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:text="Search for a Recipe"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:textSize="34sp"
+        android:textStyle="bold"/>
+=======
+        android:text="This search returns recipes you can not eat!"
+>>>>>>> e311b37f6db9da0a353e2f4bb3cce7d88bce9665
         android:textAllCaps="false"
         android:textColor="@color/green"
         android:textSize="34sp"

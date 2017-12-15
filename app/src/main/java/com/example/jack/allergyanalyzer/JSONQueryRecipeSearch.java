@@ -24,10 +24,11 @@ import java.util.List;
 public class JSONQueryRecipeSearch extends AsyncTask
 {
     private String query;
-    private String url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?";
+    private String url;
     private ArrayList<Dish> dishes;
     private Context context;
     private JSONArray jsonArray;
+    private ArrayList<String> allergies;
 
     public JSONQueryRecipeSearch (String q, Context c){
         Log.d("Constructor", "in here!");
@@ -41,24 +42,34 @@ public class JSONQueryRecipeSearch extends AsyncTask
         this.query = q;
         this.dishes = new ArrayList<Dish>(10);
         this.context = c;
-
-        this.url += "intolerances=";
-        this.url += a.get(0);
-        if(a.size() > 1)
-            for (int i = 1; i < a.size(); i++)
-                this.url += "%2C" + a.get(i);
-        this.url += "&number=10&offset=0&query="+this.query;
-
+        this.allergies = a;
 
     }
-    /*public void setUrl()
-    {
-        this.url+= "number=10&offset=0&query=" + this.query;
-    }
-    public void setIntolUrl()
-    {
 
-    }*/
+    public void setUrl(boolean b)
+    {
+        if(b) // will not return unsafe options
+        {
+            this.url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?intolerances=";
+            this.url += allergies.get(0);
+            if(allergies.size() > 1)
+                for(int i = 1; i < allergies.size(); i++)
+                    this.url += "%2C" + allergies.get(i);
+            this.url += "&number=10&offset=0&query="+this.query;
+        }
+        else // will only return unsafe options
+        {
+            this.url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?fillIngredients=false&includeIngredients=";
+            this.url += allergies.get(0);
+            if(allergies.size() > 1)
+                for(int i = 1; i < allergies.size(); i++)
+                    this.url += "%2C" + allergies.get(i);
+
+            this.url += "&instructionsRequired=false&limitLicense=false&number=10&offset=0&query=" + this.query + "&ranking=1";
+
+        }
+    }
+
     public List<Dish> getDishes(){
         return this.dishes;
     }

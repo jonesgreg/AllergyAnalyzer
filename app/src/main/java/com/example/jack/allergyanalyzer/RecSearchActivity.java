@@ -129,7 +129,8 @@ public class RecSearchActivity extends AppCompatActivity implements View.OnClick
            {
                AppState state = AppState.getInstance();
                state.setQuery(query);
-               JSONQueryRecipeSearch  startQuery = new JSONQueryRecipeSearch(query, getApplicationContext());
+               JSONQueryRecipeSearch  startQuery = new JSONQueryRecipeSearch(query, getApplicationContext(), allergies);
+               startQuery.setUrl(false);
                startQuery.execute();
            }
            else

@@ -81,6 +81,7 @@ public class RecIntolSearchAcivity extends AppCompatActivity {
                         AppState state = AppState.getInstance();
                         state.setQuery(query);
                         JSONQueryRecipeSearch  startQuery = new JSONQueryRecipeSearch(query, getApplicationContext(),allergies);
+                        startQuery.setUrl(true);
                         startQuery.execute();
                     }
                     else

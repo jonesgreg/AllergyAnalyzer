@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -21,6 +23,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SavedProfileActivity extends AppCompatActivity {
 
@@ -61,7 +64,7 @@ public class SavedProfileActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PersistentDataService.class);
 
 
-        if (!mBound && name != null)
+        if (!mBound && name == null)
         {
             bindService(intent, mConnection, BIND_IMPORTANT);
         }
@@ -74,7 +77,7 @@ public class SavedProfileActivity extends AppCompatActivity {
 
         Log.e("     In On Create", "first checkpoint reached");
 
-        init();
+
     }
 
 
@@ -86,22 +89,13 @@ public class SavedProfileActivity extends AppCompatActivity {
         TextView userNameView = (TextView)findViewById(R.id.textView7);
         TextView emailView    = (TextView)findViewById(R.id.textView14);
         TextView genderView   = (TextView)findViewById(R.id.textView16);
-        //TextView allergyView  = (TextView)findViewById(R.id.textView18);
+        TextView allergyView  = (TextView)findViewById(R.id.scrollingText);
+        allergyView.setSelected(true);
 
-        Intent profIntent = getIntent();
-        Bundle profBundle = profIntent.getExtras();
+        if (name != null) {
+            userNameView.setText(name);
 
-        Intent gendIntent = getIntent();
-        Bundle gendBundle = gendIntent.getExtras();
-
-        if (profBundle != null) {
-            String userName = (String) profBundle.get("userName");
-            userNameView.setText(userName);
-
-            String email = (String) profBundle.get("email");
             emailView.setText(email);
-
-            Boolean gender = (Boolean) profBundle.get("gender");
 
             if (gender) {
                 genderView.setText("Male");
@@ -110,10 +104,26 @@ public class SavedProfileActivity extends AppCompatActivity {
                 genderView.setText("Female");
             }
 
-            //String allergy = (String) profBundle.get("allergies");
-            //allergyView.setText(allergy);
+            String[] a = new String[allergies.size()];
+            for (int i = 0; i < allergies.size(); ++i) {
+                a[i] = allergies.get(i);
+            }
+
+            /* TODO Justin please finish this before we present. I dug up this code to help you finish this Job. It is very important it shows the allergies of the user.
+               TODO it is also important to note that you can use the variables at the top of the class normaly because I binded the service to this activity. (I Fixed it)*/
+            //ListView listView = (ListView)findViewById(R.id.recipeListView);
+            ///ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+            //        android.R.layout.simple_list_item_1,
+            //        android.R.id.text1,
+            //        a);
+
+            //listView.setAdapter(adapter);
+            StringBuilder sb = new StringBuilder();
+            for (String i : allergies) {
+                sb.append(i + ", ");
+            }
+            allergyView.setText(sb.toString());
         }
 
     }
-
 }
