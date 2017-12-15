@@ -40,13 +40,12 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="500dp"
+            android:layout_width="match_parent"
             android:layout_height="400dp"
             android:background="@drawable/googlemaps"
 
             tools:ignore="ContentDescription" />
 
 
-            tools:ignore="ContentDescription" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

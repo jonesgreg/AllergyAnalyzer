@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context="com.example.jack.allergyanalyzer.IngSearchActivity">
+    tools:context="com.example.jack.allergyanalyzer.RecIntolSearchAcivity">
 
     <LinearLayout
         android:layout_width="match_parent"
