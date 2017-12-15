@@ -33,6 +33,7 @@ public class JSONQuery extends AsyncTask {
         Log.d("Constructor", "in here!");
         this.ingredients = ingredients;
         this.url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=";
+
         this.dishes = new ArrayList<Dish>(5);
         this.context = context;
     }

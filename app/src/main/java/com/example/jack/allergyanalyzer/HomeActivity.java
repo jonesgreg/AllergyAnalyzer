@@ -24,6 +24,11 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        /***
+         * Hide Navigation Bar & Toolbar and create a full screen resolution of the app
+         */
+
+
 
         b1=(ImageButton)findViewById(R.id.imageButton2);
         b2=(ImageButton)findViewById(R.id.imageButton3);

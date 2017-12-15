@@ -3,15 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="/Users/gregoryjones/Desktop/TeamB/app/jars/picasso/picasso-2.5.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/gregoryjones/Desktop/TeamB/app/build/intermediates/transforms/dex/debug/folders/1000/2/picasso-2.5.2_d1e99c86199a0da0247f6770b8acfa3b66f7540e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/gregoryjones/Desktop/TeamB/app/jars/unirest/unirest-java-1.4.10-SNAPSHOT-withDependency-ShadedForAndroid.jar"
         jumboMode="false"
         optimize="true"
@@ -21,12 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/gregoryjones/.android/build-cache/48bdf4ee1c475fb589a1526a5adc9448db919440/output/jars/classes.jar"
+        jar="/Users/gregoryjones/Desktop/TeamB/app/jars/picasso/picasso-2.5.2.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="6da05b7498da036b5b37c3beb861cd2060929dcd">
-        <dex dex="/Users/gregoryjones/Desktop/TeamB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_93da68e02fd82881efd345ceb653f71972982fec/classes.dex" />
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/gregoryjones/Desktop/TeamB/app/build/intermediates/transforms/dex/debug/folders/1000/2/picasso-2.5.2_d1e99c86199a0da0247f6770b8acfa3b66f7540e/classes.dex" />
     </item>
 
 </items>
