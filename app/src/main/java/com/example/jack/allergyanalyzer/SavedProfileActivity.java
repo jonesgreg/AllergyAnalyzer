@@ -64,7 +64,7 @@ public class SavedProfileActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PersistentDataService.class);
 
 
-        if (!mBound && name != null)
+        if (!mBound && name == null)
         {
             bindService(intent, mConnection, BIND_IMPORTANT);
         }
@@ -77,7 +77,7 @@ public class SavedProfileActivity extends AppCompatActivity {
 
         Log.e("     In On Create", "first checkpoint reached");
 
-        init();
+
     }
 
 
@@ -92,20 +92,10 @@ public class SavedProfileActivity extends AppCompatActivity {
 
         //TextView allergyView  = (TextView)findViewById(R.id.textView18);
 
-        Intent profIntent = getIntent();
-        Bundle profBundle = profIntent.getExtras();
+        if (name != null) {
+            userNameView.setText(name);
 
-        Intent gendIntent = getIntent();
-        Bundle gendBundle = gendIntent.getExtras();
-
-        if (profBundle != null) {
-            String userName = (String) profBundle.get("userName");
-            userNameView.setText(userName);
-
-            String email = (String) profBundle.get("email");
             emailView.setText(email);
-
-            Boolean gender = (Boolean) profBundle.get("gender");
 
             if (gender) {
                 genderView.setText("Male");
@@ -113,13 +103,14 @@ public class SavedProfileActivity extends AppCompatActivity {
             else {
                 genderView.setText("Female");
             }
+
             String[] a = new String[allergies.size()];
             for (int i = 0; i < allergies.size(); ++i) {
                 a[i] = allergies.get(i);
             }
 
-
             /* TODO Justin please finish this before we present. I dug up this code to help you finish this Job. It is very important it shows the allergies of the user.
+               TODO it is also important to note that you can use the variables at the top of the class normaly because I binded the service to this activity. (I Fixed it)
             ListView listView = (ListView)findViewById(R.id.recipeListView);
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_list_item_1,
