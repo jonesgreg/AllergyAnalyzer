@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -21,6 +23,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SavedProfileActivity extends AppCompatActivity {
 
@@ -86,6 +89,7 @@ public class SavedProfileActivity extends AppCompatActivity {
         TextView userNameView = (TextView)findViewById(R.id.textView7);
         TextView emailView    = (TextView)findViewById(R.id.textView14);
         TextView genderView   = (TextView)findViewById(R.id.textView16);
+
         //TextView allergyView  = (TextView)findViewById(R.id.textView18);
 
         Intent profIntent = getIntent();
@@ -109,11 +113,22 @@ public class SavedProfileActivity extends AppCompatActivity {
             else {
                 genderView.setText("Female");
             }
+            String[] a = new String[allergies.size()];
+            for (int i = 0; i < allergies.size(); ++i) {
+                a[i] = allergies.get(i);
+            }
 
-            //String allergy = (String) profBundle.get("allergies");
-            //allergyView.setText(allergy);
+
+            /* TODO Justin please finish this before we present. I dug up this code to help you finish this Job. It is very important it shows the allergies of the user.
+            ListView listView = (ListView)findViewById(R.id.recipeListView);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_list_item_1,
+                    android.R.id.text1,
+                    a);
+
+            listView.setAdapter(adapter); */
+
         }
 
     }
-
 }
